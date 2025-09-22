@@ -1,0 +1,54 @@
+[
+  {
+    "id": "silver",
+    "name": "Silver Tier Membership",
+    "icon": "../../assets/vip_silver_icon.png",
+    "description": "Unlock essential benefits and start your VIP journey with our Silver Tier. Enjoy discounts and special member perks.",
+    "benefits": [
+      "10% discount on all movie tickets.",
+      "Receive a small complimentary popcorn during your birthday month.",
+      "Early access to ticket sales for select blockbuster screenings.",
+      "Exclusive member-only newsletters with upcoming movie news and special offers.",
+      "Accumulate points for every purchase, redeemable for snacks or future tickets."
+    ],
+    "price": "IDR 150,000 / year",
+    "cta_text": "Join Silver Tier",
+    "action_url": "signup.html?tier=silver"
+  },
+  {
+    "id": "gold",
+    "name": "Gold Tier Membership",
+    "icon": "../../assets/vip_gold_icon.png",
+    "description": "Elevate your cinema experience with enhanced perks, greater savings, and exclusive access.",
+    "benefits": [
+      "15% discount on all movie tickets and all concession items.",
+      "Receive a free medium birthday combo (popcorn + drink) during your birthday month.",
+      "24-hour priority booking window for all new movie releases.",
+      "Access to the exclusive Members Lounge at select Sinefolis locations.",
+      "Earn 2x bonus points on all purchases made at Sinefolis Cinemas.",
+      "Invitations to special member-only screenings and film events."
+    ],
+    "price": "IDR 350,000 / year",
+    "cta_text": "Upgrade to Gold",
+    "action_url": "signup.html?tier=gold"
+  },
+  {
+    "id": "platinum",
+    "name": "Platinum Tier Membership",
+    "icon": "../../assets/vip_platinum_icon.png",
+    "description": "Indulge in the ultimate luxury cinema experience with our premium Platinum Tier, offering top-tier benefits and services.",
+    "benefits": [
+      "20% discount on all movie tickets and all concession items.",
+      "Receive a free large birthday combo and a complimentary movie ticket during your birthday month.",
+      "48-hour unlimited priority booking window for all movies.",
+      "Full access to VIP Lounge & dedicated Concierge Service at all Sinefolis locations.",
+      "Complimentary valet parking service (where available at cinema locations).",
+      "Exclusive invitations to movie premieres and filmmaker Q&A sessions.",
+      "Personalized welcome gift upon joining the Platinum Tier.",
+      "Dedicated customer support line for Platinum members."
+    ],
+    "price": "IDR 750,000 / year",
+    "cta_text": "Go Platinum",
+    "action_url": "signup.html?tier=platinum"
+  }
+]

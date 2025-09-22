@@ -1,0 +1,1957 @@
+{
+  "theaters": {
+    "Sinefolis Mall Central": {
+      "id": "mall-central",
+      "name": "Sinefolis Mall Central",
+      "address": "123 Mall Central Drive, Downtown",
+      "phone": "(555) 123-4567",
+      "coordinates": {
+        "lat": 40.7128,
+        "lng": -74.006
+      },
+      "amenities": ["IMAX", "4DX", "3D", "Dolby Atmos", "VIP Seating", "Food Service"],
+      "screens": {
+        "screen1": {
+          "name": "Screen 1 - IMAX",
+          "capacity": 250,
+          "format": "IMAX",
+          "rows": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"],
+          "seatsPerRow": 20,
+          "premiumRows": ["J", "K", "L"],
+          "handicapSeats": ["A1", "A2", "A20", "A19", "L10", "L11"]
+        },
+        "screen2": {
+          "name": "Screen 2 - 4DX",
+          "capacity": 120,
+          "format": "4DX",
+          "rows": ["A", "B", "C", "D", "E", "F", "G", "H"],
+          "seatsPerRow": 15,
+          "premiumRows": ["F", "G", "H"],
+          "handicapSeats": ["A1", "A2", "A14", "A15"]
+        },
+        "screen3": {
+          "name": "Screen 3",
+          "capacity": 180,
+          "format": "Standard",
+          "rows": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"],
+          "seatsPerRow": 18,
+          "premiumRows": ["I", "J"],
+          "handicapSeats": ["A1", "A2", "A17", "A18"]
+        }
+      }
+    },
+    "Sinefolis Downtown Plaza": {
+      "id": "downtown-plaza",
+      "name": "Sinefolis Downtown Plaza",
+      "address": "456 Plaza Street, City Center",
+      "phone": "(555) 987-6543",
+      "coordinates": {
+        "lat": 40.7112,
+        "lng": -73.9976
+      },
+      "amenities": ["3D", "Dolby Atmos", "Recliner Seats"],
+      "screens": {
+        "screen1": {
+          "name": "Screen 1",
+          "capacity": 150,
+          "format": "Standard",
+          "rows": ["A", "B", "C", "D", "E", "F", "G", "H", "I"],
+          "seatsPerRow": 16,
+          "premiumRows": ["H", "I"],
+          "handicapSeats": ["A1", "A2", "A15", "A16"]
+        },
+        "screen2": {
+          "name": "Screen 2 - 3D",
+          "capacity": 120,
+          "format": "3D",
+          "rows": ["A", "B", "C", "D", "E", "F", "G"],
+          "seatsPerRow": 16,
+          "premiumRows": ["F", "G"],
+          "handicapSeats": ["A1", "A2", "A15", "A16"]
+        }
+      }
+    }
+  },
+  "showtimes": {
+    "interstellar": {
+      "2024-01-15": {
+        "Sinefolis Mall Central": {
+          "screen1": [
+            {
+              "time": "10:30 AM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 220,
+              "occupiedSeats": ["D5", "D6", "D7", "E10", "E11", "E12", "J8", "J9", "J10", "J11"]
+            },
+            {
+              "time": "2:15 PM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 215,
+              "occupiedSeats": [
+                "C8",
+                "C9",
+                "D5",
+                "D6",
+                "D7",
+                "E10",
+                "E11",
+                "E12",
+                "J8",
+                "J9",
+                "J10",
+                "J11",
+                "K5",
+                "K6",
+                "K7"
+              ]
+            },
+            {
+              "time": "6:00 PM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 180,
+              "occupiedSeats": [
+                "B5",
+                "B6",
+                "C8",
+                "C9",
+                "D5",
+                "D6",
+                "D7",
+                "E10",
+                "E11",
+                "E12",
+                "F15",
+                "F16",
+                "G10",
+                "G11",
+                "G12",
+                "H8",
+                "H9",
+                "J8",
+                "J9",
+                "J10",
+                "J11",
+                "K5",
+                "K6",
+                "K7"
+              ]
+            },
+            {
+              "time": "9:45 PM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 200,
+              "occupiedSeats": [
+                "C8",
+                "C9",
+                "D5",
+                "D6",
+                "D7",
+                "E10",
+                "E11",
+                "E12",
+                "J8",
+                "J9",
+                "J10",
+                "J11",
+                "K5",
+                "K6",
+                "K7"
+              ]
+            }
+          ],
+          "screen3": [
+            {
+              "time": "9:00 AM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 170,
+              "occupiedSeats": ["D5", "D6", "E10", "E11"]
+            },
+            {
+              "time": "12:30 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 160,
+              "occupiedSeats": ["C8", "C9", "D5", "D6", "E10", "E11", "I8", "I9", "I10"]
+            },
+            {
+              "time": "7:30 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 140,
+              "occupiedSeats": [
+                "B5",
+                "B6",
+                "C8",
+                "C9",
+                "D5",
+                "D6",
+                "E10",
+                "E11",
+                "F15",
+                "F16",
+                "G10",
+                "G11",
+                "H8",
+                "H9",
+                "I8",
+                "I9",
+                "I10",
+                "J5",
+                "J6"
+              ]
+            }
+          ]
+        },
+        "Sinefolis Downtown Plaza": {
+          "screen1": [
+            {
+              "time": "1:30 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 130,
+              "occupiedSeats": ["C8", "C9", "D5", "D6", "E10", "E11", "H8", "H9", "H10"]
+            },
+            {
+              "time": "9:00 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 125,
+              "occupiedSeats": ["C8", "C9", "D5", "D6", "E10", "E11", "H8", "H9", "H10"]
+            }
+          ]
+        }
+      },
+      "2024-01-16": {
+        "Sinefolis Mall Central": {
+          "screen1": [
+            {
+              "time": "10:30 AM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 230,
+              "occupiedSeats": ["D5", "D6", "E10", "E11", "J8", "J9"]
+            },
+            {
+              "time": "2:15 PM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 225,
+              "occupiedSeats": ["C8", "C9", "D5", "D6", "E10", "E11", "J8", "J9", "K5", "K6"]
+            },
+            {
+              "time": "6:00 PM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 200,
+              "occupiedSeats": [
+                "B5",
+                "B6",
+                "C8",
+                "C9",
+                "D5",
+                "D6",
+                "E10",
+                "E11",
+                "F15",
+                "F16",
+                "G10",
+                "G11",
+                "H8",
+                "H9",
+                "J8",
+                "J9",
+                "K5",
+                "K6"
+              ]
+            }
+          ],
+          "screen3": [
+            {
+              "time": "12:30 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 165,
+              "occupiedSeats": ["C8", "C9", "D5", "D6", "I8", "I9"]
+            },
+            {
+              "time": "7:30 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 145,
+              "occupiedSeats": [
+                "B5",
+                "B6",
+                "C8",
+                "C9",
+                "D5",
+                "D6",
+                "F15",
+                "F16",
+                "G10",
+                "G11",
+                "H8",
+                "H9",
+                "I8",
+                "I9",
+                "J5",
+                "J6"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "now-you-see-me": {
+      "2024-01-15": {
+        "Sinefolis Mall Central": {
+          "screen3": [
+            {
+              "time": "11:00 AM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 165,
+              "occupiedSeats": ["D8", "D9", "E12", "E13", "F5", "F6"]
+            },
+            {
+              "time": "2:00 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 150,
+              "occupiedSeats": ["C5", "C6", "D8", "D9", "E12", "E13", "F5", "F6", "G10", "G11", "H7", "H8"]
+            },
+            {
+              "time": "5:30 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 140,
+              "occupiedSeats": [
+                "B8",
+                "B9",
+                "C5",
+                "C6",
+                "D8",
+                "D9",
+                "E12",
+                "E13",
+                "F5",
+                "F6",
+                "G10",
+                "G11",
+                "H7",
+                "H8",
+                "I9",
+                "I10"
+              ]
+            },
+            {
+              "time": "8:45 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 155,
+              "occupiedSeats": ["C5", "C6", "D8", "D9", "E12", "E13", "F5", "F6", "G10", "G11"]
+            }
+          ]
+        },
+        "Sinefolis Downtown Plaza": {
+          "screen1": [
+            {
+              "time": "12:00 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 135,
+              "occupiedSeats": ["D7", "D8", "E9", "E10", "F12", "F13"]
+            },
+            {
+              "time": "3:15 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 125,
+              "occupiedSeats": ["C6", "C7", "D7", "D8", "E9", "E10", "F12", "F13", "G8", "G9"]
+            },
+            {
+              "time": "6:30 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 115,
+              "occupiedSeats": ["B5", "B6", "C6", "C7", "D7", "D8", "E9", "E10", "F12", "F13", "G8", "G9", "H10", "H11"]
+            },
+            {
+              "time": "9:45 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 130,
+              "occupiedSeats": ["C6", "C7", "D7", "D8", "E9", "E10", "F12", "F13", "G8", "G9"]
+            }
+          ]
+        }
+      },
+      "2024-01-16": {
+        "Sinefolis Mall Central": {
+          "screen3": [
+            {
+              "time": "11:00 AM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 170,
+              "occupiedSeats": ["D8", "D9", "E12", "E13"]
+            },
+            {
+              "time": "2:00 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 160,
+              "occupiedSeats": ["C5", "C6", "D8", "D9", "E12", "E13", "G10", "G11"]
+            },
+            {
+              "time": "8:45 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 165,
+              "occupiedSeats": ["C5", "C6", "D8", "D9", "E12", "E13"]
+            }
+          ]
+        },
+        "Sinefolis Downtown Plaza": {
+          "screen1": [
+            {
+              "time": "3:15 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 140,
+              "occupiedSeats": ["C6", "C7", "D7", "D8", "E9", "E10"]
+            },
+            {
+              "time": "9:45 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 135,
+              "occupiedSeats": ["C6", "C7", "D7", "D8", "E9", "E10", "G8", "G9"]
+            }
+          ]
+        }
+      }
+    },
+    "space-jam-a-new-legacy": {
+      "2024-01-15": {
+        "Sinefolis Mall Central": {
+          "screen2": [
+            {
+              "time": "10:00 AM",
+              "format": "4DX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 105,
+              "occupiedSeats": ["C4", "C5", "D6", "D7", "E8", "E9"]
+            },
+            {
+              "time": "1:30 PM",
+              "format": "4DX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 95,
+              "occupiedSeats": ["B4", "B5", "C4", "C5", "D6", "D7", "E8", "E9", "F10", "F11"]
+            },
+            {
+              "time": "4:00 PM",
+              "format": "4DX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 85,
+              "occupiedSeats": [
+                "B4",
+                "B5",
+                "C4",
+                "C5",
+                "D6",
+                "D7",
+                "E8",
+                "E9",
+                "F10",
+                "F11",
+                "G5",
+                "G6",
+                "G7",
+                "H8",
+                "H9"
+              ]
+            },
+            {
+              "time": "6:30 PM",
+              "format": "4DX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 90,
+              "occupiedSeats": ["B4", "B5", "C4", "C5", "D6", "D7", "E8", "E9", "F10", "F11", "G5", "G6"]
+            }
+          ],
+          "screen3": [
+            {
+              "time": "10:30 AM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 170,
+              "occupiedSeats": ["D5", "D6", "E10", "E11"]
+            },
+            {
+              "time": "1:00 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 160,
+              "occupiedSeats": ["C8", "C9", "D5", "D6", "E10", "E11", "F12", "F13"]
+            },
+            {
+              "time": "3:30 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 150,
+              "occupiedSeats": ["B7", "B8", "C8", "C9", "D5", "D6", "E10", "E11", "F12", "F13", "G9", "G10"]
+            }
+          ]
+        },
+        "Sinefolis Downtown Plaza": {
+          "screen2": [
+            {
+              "time": "11:30 AM",
+              "format": "3D",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 110,
+              "occupiedSeats": ["C5", "C6", "D7", "D8"]
+            },
+            {
+              "time": "2:15 PM",
+              "format": "3D",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 100,
+              "occupiedSeats": ["B5", "B6", "C5", "C6", "D7", "D8", "E9", "E10"]
+            },
+            {
+              "time": "5:00 PM",
+              "format": "3D",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 95,
+              "occupiedSeats": ["B5", "B6", "C5", "C6", "D7", "D8", "E9", "E10", "F11", "F12"]
+            }
+          ]
+        }
+      },
+      "2024-01-16": {
+        "Sinefolis Mall Central": {
+          "screen2": [
+            {
+              "time": "10:00 AM",
+              "format": "4DX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 110,
+              "occupiedSeats": ["C4", "C5", "D6", "D7"]
+            },
+            {
+              "time": "1:30 PM",
+              "format": "4DX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 100,
+              "occupiedSeats": ["B4", "B5", "C4", "C5", "D6", "D7", "E8", "E9"]
+            },
+            {
+              "time": "6:30 PM",
+              "format": "4DX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 95,
+              "occupiedSeats": ["B4", "B5", "C4", "C5", "D6", "D7", "E8", "E9", "F10", "F11"]
+            }
+          ],
+          "screen3": [
+            {
+              "time": "10:30 AM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 175,
+              "occupiedSeats": ["D5", "D6"]
+            },
+            {
+              "time": "3:30 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 165,
+              "occupiedSeats": ["B7", "B8", "C8", "C9", "D5", "D6"]
+            }
+          ]
+        }
+      }
+    },
+    "tenet": {
+      "2024-01-15": {
+        "Sinefolis Mall Central": {
+          "screen1": [
+            {
+              "time": "11:00 AM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 210,
+              "occupiedSeats": ["D10", "D11", "E8", "E9", "F12", "F13", "J6", "J7", "J8", "J9"]
+            },
+            {
+              "time": "3:00 PM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 195,
+              "occupiedSeats": [
+                "C7",
+                "C8",
+                "D10",
+                "D11",
+                "E8",
+                "E9",
+                "F12",
+                "F13",
+                "G14",
+                "G15",
+                "H10",
+                "H11",
+                "J6",
+                "J7",
+                "J8",
+                "J9",
+                "K8",
+                "K9"
+              ]
+            },
+            {
+              "time": "7:15 PM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 175,
+              "occupiedSeats": [
+                "B9",
+                "B10",
+                "C7",
+                "C8",
+                "D10",
+                "D11",
+                "E8",
+                "E9",
+                "F12",
+                "F13",
+                "G14",
+                "G15",
+                "H10",
+                "H11",
+                "I5",
+                "I6",
+                "J6",
+                "J7",
+                "J8",
+                "J9",
+                "K8",
+                "K9",
+                "L10",
+                "L11"
+              ]
+            }
+          ],
+          "screen3": [
+            {
+              "time": "9:30 AM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 170,
+              "occupiedSeats": ["D8", "D9", "E11", "E12"]
+            },
+            {
+              "time": "1:15 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 155,
+              "occupiedSeats": ["C6", "C7", "D8", "D9", "E11", "E12", "F14", "F15", "G8", "G9"]
+            },
+            {
+              "time": "5:00 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 145,
+              "occupiedSeats": [
+                "B8",
+                "B9",
+                "C6",
+                "C7",
+                "D8",
+                "D9",
+                "E11",
+                "E12",
+                "F14",
+                "F15",
+                "G8",
+                "G9",
+                "H12",
+                "H13"
+              ]
+            },
+            {
+              "time": "8:30 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 160,
+              "occupiedSeats": ["C6", "C7", "D8", "D9", "E11", "E12", "F14", "F15", "G8", "G9"]
+            }
+          ]
+        },
+        "Sinefolis Downtown Plaza": {
+          "screen1": [
+            {
+              "time": "2:00 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 130,
+              "occupiedSeats": ["D6", "D7", "E9", "E10", "F11", "F12", "G7", "G8"]
+            },
+            {
+              "time": "6:45 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 120,
+              "occupiedSeats": ["C5", "C6", "D6", "D7", "E9", "E10", "F11", "F12", "G7", "G8", "H9", "H10"]
+            },
+            {
+              "time": "10:00 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 125,
+              "occupiedSeats": ["D6", "D7", "E9", "E10", "F11", "F12", "G7", "G8", "H9", "H10"]
+            }
+          ]
+        }
+      },
+      "2024-01-16": {
+        "Sinefolis Mall Central": {
+          "screen1": [
+            {
+              "time": "11:00 AM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 220,
+              "occupiedSeats": ["D10", "D11", "E8", "E9", "J6", "J7"]
+            },
+            {
+              "time": "3:00 PM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 205,
+              "occupiedSeats": ["C7", "C8", "D10", "D11", "E8", "E9", "F12", "F13", "J6", "J7", "J8", "J9"]
+            },
+            {
+              "time": "7:15 PM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 185,
+              "occupiedSeats": [
+                "B9",
+                "B10",
+                "C7",
+                "C8",
+                "D10",
+                "D11",
+                "E8",
+                "E9",
+                "F12",
+                "F13",
+                "G14",
+                "G15",
+                "H10",
+                "H11",
+                "J6",
+                "J7",
+                "J8",
+                "J9",
+                "K8",
+                "K9"
+              ]
+            }
+          ],
+          "screen3": [
+            {
+              "time": "1:15 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 165,
+              "occupiedSeats": ["C6", "C7", "D8", "D9", "E11", "E12"]
+            },
+            {
+              "time": "8:30 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 170,
+              "occupiedSeats": ["C6", "C7", "D8", "D9", "E11", "E12"]
+            }
+          ]
+        }
+      }
+    },
+    "joker": {
+      "2024-01-15": {
+        "Sinefolis Mall Central": {
+          "screen3": [
+            {
+              "time": "6:00 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 135,
+              "occupiedSeats": [
+                "C9",
+                "C10",
+                "D7",
+                "D8",
+                "E11",
+                "E12",
+                "F6",
+                "F7",
+                "G13",
+                "G14",
+                "H8",
+                "H9",
+                "I10",
+                "I11"
+              ]
+            },
+            {
+              "time": "9:15 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 125,
+              "occupiedSeats": [
+                "B8",
+                "B9",
+                "C9",
+                "C10",
+                "D7",
+                "D8",
+                "E11",
+                "E12",
+                "F6",
+                "F7",
+                "G13",
+                "G14",
+                "H8",
+                "H9",
+                "I10",
+                "I11",
+                "J7",
+                "J8"
+              ]
+            }
+          ]
+        },
+        "Sinefolis Downtown Plaza": {
+          "screen1": [
+            {
+              "time": "7:30 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 110,
+              "occupiedSeats": ["C7", "C8", "D9", "D10", "E6", "E7", "F11", "F12", "G8", "G9", "H10", "H11", "I7", "I8"]
+            },
+            {
+              "time": "10:15 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 115,
+              "occupiedSeats": ["C7", "C8", "D9", "D10", "E6", "E7", "F11", "F12", "G8", "G9", "H10", "H11"]
+            }
+          ]
+        }
+      },
+      "2024-01-16": {
+        "Sinefolis Mall Central": {
+          "screen3": [
+            {
+              "time": "6:00 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 145,
+              "occupiedSeats": ["C9", "C10", "D7", "D8", "E11", "E12", "F6", "F7", "G13", "G14"]
+            },
+            {
+              "time": "9:15 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 135,
+              "occupiedSeats": ["B8", "B9", "C9", "C10", "D7", "D8", "E11", "E12", "F6", "F7", "G13", "G14", "H8", "H9"]
+            }
+          ]
+        },
+        "Sinefolis Downtown Plaza": {
+          "screen1": [
+            {
+              "time": "7:30 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 120,
+              "occupiedSeats": ["C7", "C8", "D9", "D10", "E6", "E7", "F11", "F12", "G8", "G9"]
+            }
+          ]
+        }
+      }
+    },
+    "dune": {
+      "2024-01-15": {
+        "Sinefolis Mall Central": {
+          "screen1": [
+            {
+              "time": "12:00 PM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 200,
+              "occupiedSeats": [
+                "D12",
+                "D13",
+                "E6",
+                "E7",
+                "F14",
+                "F15",
+                "G8",
+                "G9",
+                "H11",
+                "H12",
+                "J10",
+                "J11",
+                "K6",
+                "K7"
+              ]
+            },
+            {
+              "time": "4:30 PM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 180,
+              "occupiedSeats": [
+                "C8",
+                "C9",
+                "D12",
+                "D13",
+                "E6",
+                "E7",
+                "F14",
+                "F15",
+                "G8",
+                "G9",
+                "H11",
+                "H12",
+                "I9",
+                "I10",
+                "J10",
+                "J11",
+                "K6",
+                "K7",
+                "L8",
+                "L9"
+              ]
+            },
+            {
+              "time": "8:45 PM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 165,
+              "occupiedSeats": [
+                "B10",
+                "B11",
+                "C8",
+                "C9",
+                "D12",
+                "D13",
+                "E6",
+                "E7",
+                "F14",
+                "F15",
+                "G8",
+                "G9",
+                "H11",
+                "H12",
+                "I9",
+                "I10",
+                "J10",
+                "J11",
+                "K6",
+                "K7",
+                "L8",
+                "L9",
+                "L12",
+                "L13"
+              ]
+            }
+          ]
+        },
+        "Sinefolis Downtown Plaza": {
+          "screen2": [
+            {
+              "time": "1:45 PM",
+              "format": "3D",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 105,
+              "occupiedSeats": ["C8", "C9", "D6", "D7", "E10", "E11", "F5", "F6"]
+            },
+            {
+              "time": "6:00 PM",
+              "format": "3D",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 95,
+              "occupiedSeats": ["B7", "B8", "C8", "C9", "D6", "D7", "E10", "E11", "F5", "F6", "G9", "G10"]
+            },
+            {
+              "time": "9:30 PM",
+              "format": "3D",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 100,
+              "occupiedSeats": ["C8", "C9", "D6", "D7", "E10", "E11", "F5", "F6", "G9", "G10"]
+            }
+          ]
+        }
+      },
+      "2024-01-16": {
+        "Sinefolis Mall Central": {
+          "screen1": [
+            {
+              "time": "12:00 PM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 210,
+              "occupiedSeats": ["D12", "D13", "E6", "E7", "F14", "F15", "J10", "J11"]
+            },
+            {
+              "time": "4:30 PM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 190,
+              "occupiedSeats": [
+                "C8",
+                "C9",
+                "D12",
+                "D13",
+                "E6",
+                "E7",
+                "F14",
+                "F15",
+                "G8",
+                "G9",
+                "H11",
+                "H12",
+                "J10",
+                "J11",
+                "K6",
+                "K7"
+              ]
+            },
+            {
+              "time": "8:45 PM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 175,
+              "occupiedSeats": [
+                "B10",
+                "B11",
+                "C8",
+                "C9",
+                "D12",
+                "D13",
+                "E6",
+                "E7",
+                "F14",
+                "F15",
+                "G8",
+                "G9",
+                "H11",
+                "H12",
+                "I9",
+                "I10",
+                "J10",
+                "J11",
+                "K6",
+                "K7",
+                "L8",
+                "L9"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "the-batman": {
+      "2024-01-15": {
+        "Sinefolis Mall Central": {
+          "screen2": [
+            {
+              "time": "7:00 PM",
+              "format": "4DX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 85,
+              "occupiedSeats": ["C6", "C7", "D8", "D9", "E5", "E6", "F10", "F11", "G7", "G8", "H9", "H10"]
+            },
+            {
+              "time": "10:30 PM",
+              "format": "4DX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 90,
+              "occupiedSeats": ["C6", "C7", "D8", "D9", "E5", "E6", "F10", "F11", "G7", "G8"]
+            }
+          ]
+        },
+        "Sinefolis Downtown Plaza": {
+          "screen1": [
+            {
+              "time": "4:00 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 120,
+              "occupiedSeats": ["D8", "D9", "E10", "E11", "F7", "F8", "G12", "G13", "H9", "H10"]
+            },
+            {
+              "time": "8:15 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 110,
+              "occupiedSeats": ["C7", "C8", "D8", "D9", "E10", "E11", "F7", "F8", "G12", "G13", "H9", "H10", "I8", "I9"]
+            }
+          ]
+        }
+      },
+      "2024-01-16": {
+        "Sinefolis Mall Central": {
+          "screen2": [
+            {
+              "time": "7:00 PM",
+              "format": "4DX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 95,
+              "occupiedSeats": ["C6", "C7", "D8", "D9", "E5", "E6", "F10", "F11"]
+            },
+            {
+              "time": "10:30 PM",
+              "format": "4DX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 100,
+              "occupiedSeats": ["C6", "C7", "D8", "D9", "E5", "E6"]
+            }
+          ]
+        },
+        "Sinefolis Downtown Plaza": {
+          "screen1": [
+            {
+              "time": "4:00 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 130,
+              "occupiedSeats": ["D8", "D9", "E10", "E11", "F7", "F8"]
+            },
+            {
+              "time": "8:15 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 120,
+              "occupiedSeats": ["C7", "C8", "D8", "D9", "E10", "E11", "F7", "F8", "G12", "G13"]
+            }
+          ]
+        }
+      }
+    },
+    "black-widow": {
+      "2024-01-15": {
+        "Sinefolis Mall Central": {
+          "screen3": [
+            {
+              "time": "4:15 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 155,
+              "occupiedSeats": ["D9", "D10", "E7", "E8", "F12", "F13", "G10", "G11"]
+            }
+          ]
+        },
+        "Sinefolis Downtown Plaza": {
+          "screen2": [
+            {
+              "time": "12:30 PM",
+              "format": "3D",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 110,
+              "occupiedSeats": ["C7", "C8", "D9", "D10", "E6", "E7"]
+            },
+            {
+              "time": "3:45 PM",
+              "format": "3D",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 100,
+              "occupiedSeats": ["B8", "B9", "C7", "C8", "D9", "D10", "E6", "E7", "F10", "F11"]
+            },
+            {
+              "time": "7:00 PM",
+              "format": "3D",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 95,
+              "occupiedSeats": ["B8", "B9", "C7", "C8", "D9", "D10", "E6", "E7", "F10", "F11", "G8", "G9"]
+            }
+          ]
+        }
+      },
+      "2024-01-16": {
+        "Sinefolis Mall Central": {
+          "screen3": [
+            {
+              "time": "4:15 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 165,
+              "occupiedSeats": ["D9", "D10", "E7", "E8", "F12", "F13"]
+            }
+          ]
+        },
+        "Sinefolis Downtown Plaza": {
+          "screen2": [
+            {
+              "time": "12:30 PM",
+              "format": "3D",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 115,
+              "occupiedSeats": ["C7", "C8", "D9", "D10"]
+            },
+            {
+              "time": "7:00 PM",
+              "format": "3D",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 105,
+              "occupiedSeats": ["B8", "B9", "C7", "C8", "D9", "D10", "E6", "E7", "F10", "F11"]
+            }
+          ]
+        }
+      }
+    },
+    "shang-chi-and-the-legend-of-the-ten-rings": {
+      "2024-01-15": {
+        "Sinefolis Mall Central": {
+          "screen2": [
+            {
+              "time": "2:30 PM",
+              "format": "4DX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 95,
+              "occupiedSeats": ["C8", "C9", "D5", "D6", "E11", "E12", "F7", "F8", "G10", "G11"]
+            },
+            {
+              "time": "5:45 PM",
+              "format": "4DX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 85,
+              "occupiedSeats": ["B6", "B7", "C8", "C9", "D5", "D6", "E11", "E12", "F7", "F8", "G10", "G11", "H8", "H9"]
+            }
+          ]
+        },
+        "Sinefolis Downtown Plaza": {
+          "screen1": [
+            {
+              "time": "11:15 AM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 140,
+              "occupiedSeats": ["D7", "D8", "E9", "E10", "F11", "F12"]
+            },
+            {
+              "time": "2:30 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 130,
+              "occupiedSeats": ["C6", "C7", "D7", "D8", "E9", "E10", "F11", "F12", "G8", "G9"]
+            },
+            {
+              "time": "5:45 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 120,
+              "occupiedSeats": ["B7", "B8", "C6", "C7", "D7", "D8", "E9", "E10", "F11", "F12", "G8", "G9", "H10", "H11"]
+            }
+          ]
+        }
+      },
+      "2024-01-16": {
+        "Sinefolis Mall Central": {
+          "screen2": [
+            {
+              "time": "2:30 PM",
+              "format": "4DX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 105,
+              "occupiedSeats": ["C8", "C9", "D5", "D6", "E11", "E12"]
+            },
+            {
+              "time": "5:45 PM",
+              "format": "4DX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 95,
+              "occupiedSeats": ["B6", "B7", "C8", "C9", "D5", "D6", "E11", "E12", "F7", "F8"]
+            }
+          ]
+        },
+        "Sinefolis Downtown Plaza": {
+          "screen1": [
+            {
+              "time": "11:15 AM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 145,
+              "occupiedSeats": ["D7", "D8", "E9", "E10"]
+            },
+            {
+              "time": "5:45 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 130,
+              "occupiedSeats": ["B7", "B8", "C6", "C7", "D7", "D8", "E9", "E10", "F11", "F12"]
+            }
+          ]
+        }
+      }
+    },
+    "no-time-to-die": {
+      "2024-01-15": {
+        "Sinefolis Mall Central": {
+          "screen1": [
+            {
+              "time": "1:00 PM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 190,
+              "occupiedSeats": [
+                "D14",
+                "D15",
+                "E9",
+                "E10",
+                "F16",
+                "F17",
+                "G7",
+                "G8",
+                "H13",
+                "H14",
+                "I11",
+                "I12",
+                "J12",
+                "J13",
+                "K9",
+                "K10"
+              ]
+            },
+            {
+              "time": "5:30 PM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 170,
+              "occupiedSeats": [
+                "C10",
+                "C11",
+                "D14",
+                "D15",
+                "E9",
+                "E10",
+                "F16",
+                "F17",
+                "G7",
+                "G8",
+                "H13",
+                "H14",
+                "I11",
+                "I12",
+                "J12",
+                "J13",
+                "K9",
+                "K10",
+                "L7",
+                "L8",
+                "L14",
+                "L15"
+              ]
+            }
+          ]
+        },
+        "Sinefolis Downtown Plaza": {
+          "screen1": [
+            {
+              "time": "12:45 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 125,
+              "occupiedSeats": ["D9", "D10", "E7", "E8", "F12", "F13", "G10", "G11", "H8", "H9"]
+            },
+            {
+              "time": "4:30 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 115,
+              "occupiedSeats": [
+                "C8",
+                "C9",
+                "D9",
+                "D10",
+                "E7",
+                "E8",
+                "F12",
+                "F13",
+                "G10",
+                "G11",
+                "H8",
+                "H9",
+                "I11",
+                "I12"
+              ]
+            },
+            {
+              "time": "8:00 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 105,
+              "occupiedSeats": [
+                "B9",
+                "B10",
+                "C8",
+                "C9",
+                "D9",
+                "D10",
+                "E7",
+                "E8",
+                "F12",
+                "F13",
+                "G10",
+                "G11",
+                "H8",
+                "H9",
+                "I11",
+                "I12"
+              ]
+            }
+          ]
+        }
+      },
+      "2024-01-16": {
+        "Sinefolis Mall Central": {
+          "screen1": [
+            {
+              "time": "1:00 PM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 200,
+              "occupiedSeats": ["D14", "D15", "E9", "E10", "F16", "F17", "G7", "G8", "J12", "J13"]
+            },
+            {
+              "time": "5:30 PM",
+              "format": "IMAX",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 180,
+              "occupiedSeats": [
+                "C10",
+                "C11",
+                "D14",
+                "D15",
+                "E9",
+                "E10",
+                "F16",
+                "F17",
+                "G7",
+                "G8",
+                "H13",
+                "H14",
+                "I11",
+                "I12",
+                "J12",
+                "J13",
+                "K9",
+                "K10"
+              ]
+            }
+          ]
+        },
+        "Sinefolis Downtown Plaza": {
+          "screen1": [
+            {
+              "time": "12:45 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 135,
+              "occupiedSeats": ["D9", "D10", "E7", "E8", "F12", "F13"]
+            },
+            {
+              "time": "8:00 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 115,
+              "occupiedSeats": ["B9", "B10", "C8", "C9", "D9", "D10", "E7", "E8", "F12", "F13", "G10", "G11"]
+            }
+          ]
+        }
+      }
+    },
+    "a-quiet-place-part-ii": {
+      "2024-01-15": {
+        "Sinefolis Mall Central": {
+          "screen3": [
+            {
+              "time": "8:00 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 140,
+              "occupiedSeats": [
+                "C11",
+                "C12",
+                "D8",
+                "D9",
+                "E13",
+                "E14",
+                "F7",
+                "F8",
+                "G12",
+                "G13",
+                "H9",
+                "H10",
+                "I14",
+                "I15"
+              ]
+            },
+            {
+              "time": "10:45 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 150,
+              "occupiedSeats": ["C11", "C12", "D8", "D9", "E13", "E14", "F7", "F8", "G12", "G13"]
+            }
+          ]
+        },
+        "Sinefolis Downtown Plaza": {
+          "screen1": [
+            {
+              "time": "7:15 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 115,
+              "occupiedSeats": [
+                "C9",
+                "C10",
+                "D8",
+                "D9",
+                "E11",
+                "E12",
+                "F7",
+                "F8",
+                "G13",
+                "G14",
+                "H10",
+                "H11",
+                "I9",
+                "I10"
+              ]
+            },
+            {
+              "time": "9:45 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 120,
+              "occupiedSeats": ["C9", "C10", "D8", "D9", "E11", "E12", "F7", "F8", "G13", "G14", "H10", "H11"]
+            }
+          ]
+        }
+      },
+      "2024-01-16": {
+        "Sinefolis Mall Central": {
+          "screen3": [
+            {
+              "time": "8:00 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 150,
+              "occupiedSeats": ["C11", "C12", "D8", "D9", "E13", "E14", "F7", "F8", "G12", "G13"]
+            },
+            {
+              "time": "10:45 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 160,
+              "occupiedSeats": ["C11", "C12", "D8", "D9", "E13", "E14", "F7", "F8"]
+            }
+          ]
+        },
+        "Sinefolis Downtown Plaza": {
+          "screen1": [
+            {
+              "time": "7:15 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 125,
+              "occupiedSeats": ["C9", "C10", "D8", "D9", "E11", "E12", "F7", "F8", "G13", "G14"]
+            }
+          ]
+        }
+      }
+    },
+    "free-guy": {
+      "2024-01-15": {
+        "Sinefolis Mall Central": {
+          "screen3": [
+            {
+              "time": "11:30 AM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 165,
+              "occupiedSeats": ["D10", "D11", "E8", "E9", "F13", "F14"]
+            },
+            {
+              "time": "2:45 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 155,
+              "occupiedSeats": ["C7", "C8", "D10", "D11", "E8", "E9", "F13", "F14", "G11", "G12"]
+            },
+            {
+              "time": "6:15 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 145,
+              "occupiedSeats": [
+                "B9",
+                "B10",
+                "C7",
+                "C8",
+                "D10",
+                "D11",
+                "E8",
+                "E9",
+                "F13",
+                "F14",
+                "G11",
+                "G12",
+                "H8",
+                "H9"
+              ]
+            }
+          ]
+        },
+        "Sinefolis Downtown Plaza": {
+          "screen2": [
+            {
+              "time": "10:45 AM",
+              "format": "3D",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 110,
+              "occupiedSeats": ["C9", "C10", "D7", "D8", "E11", "E12"]
+            },
+            {
+              "time": "1:30 PM",
+              "format": "3D",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 100,
+              "occupiedSeats": ["B8", "B9", "C9", "C10", "D7", "D8", "E11", "E12", "F6", "F7"]
+            },
+            {
+              "time": "4:15 PM",
+              "format": "3D",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 95,
+              "occupiedSeats": ["B8", "B9", "C9", "C10", "D7", "D8", "E11", "E12", "F6", "F7", "G10", "G11"]
+            }
+          ]
+        }
+      },
+      "2024-01-16": {
+        "Sinefolis Mall Central": {
+          "screen3": [
+            {
+              "time": "11:30 AM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 170,
+              "occupiedSeats": ["D10", "D11", "E8", "E9"]
+            },
+            {
+              "time": "2:45 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 160,
+              "occupiedSeats": ["C7", "C8", "D10", "D11", "E8", "E9", "F13", "F14"]
+            },
+            {
+              "time": "6:15 PM",
+              "format": "Standard",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 150,
+              "occupiedSeats": ["B9", "B10", "C7", "C8", "D10", "D11", "E8", "E9", "F13", "F14", "G11", "G12"]
+            }
+          ]
+        },
+        "Sinefolis Downtown Plaza": {
+          "screen2": [
+            {
+              "time": "10:45 AM",
+              "format": "3D",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 115,
+              "occupiedSeats": ["C9", "C10", "D7", "D8"]
+            },
+            {
+              "time": "4:15 PM",
+              "format": "3D",
+              "language": "English",
+              "subtitles": false,
+              "availableSeats": 105,
+              "occupiedSeats": ["B8", "B9", "C9", "C10", "D7", "D8", "E11", "E12", "F6", "F7"]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "pricing": {
+    "tickets": {
+      "adult": 15.0,
+      "child": 10.0,
+      "senior": 12.0,
+      "student": 12.5
+    },
+    "formatPricing": {
+      "IMAX": 5.0,
+      "IMAX 3D": 7.0,
+      "4DX": 8.0,
+      "3D": 3.0,
+      "Standard": 0.0
+    },
+    "premiumSeating": 3.0,
+    "taxRate": 0.08,
+    "serviceFee": 1.5
+  },
+  "addons": {
+    "categories": {
+      "snacks": {
+        "name": "Snacks",
+        "description": "Delicious movie snacks"
+      },
+      "beverages": {
+        "name": "Beverages",
+        "description": "Refreshing drinks"
+      },
+      "combos": {
+        "name": "Combo Deals",
+        "description": "Save with our special combos"
+      }
+    },
+    "items": {
+      "popcorn": {
+        "id": "popcorn",
+        "name": "Large Popcorn",
+        "description": "Freshly popped with butter",
+        "price": 8.5,
+        "image": "../../assets/popcorn.png",
+        "category": "snacks"
+      },
+      "nachos": {
+        "id": "nachos",
+        "name": "Nachos & Cheese",
+        "description": "Crispy nachos with cheese sauce",
+        "price": 7.0,
+        "image": "../../assets/nacho.png",
+        "category": "snacks"
+      },
+      "candy": {
+        "id": "candy",
+        "name": "Assorted Candy",
+        "description": "Choose from a variety of candies",
+        "price": 5.0,
+        "image": "../../assets/candy.webp",
+        "category": "snacks"
+      },
+      "hotdog": {
+        "id": "hotdog",
+        "name": "Hot Dog",
+        "description": "Classic hot dog with condiments",
+        "price": 6.5,
+        "image": "../../assets/hotdog.png",
+        "category": "snacks"
+      },
+      "soda": {
+        "id": "soda",
+        "name": "Large Soda",
+        "description": "Choice of Coke, Pepsi, or Sprite",
+        "price": 5.5,
+        "image": "../../assets/soda.png",
+        "category": "beverages"
+        },
+        "water": {
+        "id": "water",
+        "name": "Bottled Water",
+        "description": "Premium spring water",
+        "price": 3.0,
+        "image": "../../assets/water.png",
+        "category": "beverages"
+        },
+        "icee": {
+        "id": "icee",
+        "name": "ICEE Frozen Drink",
+        "description": "Blue raspberry or cherry flavor",
+        "price": 6.0,
+        "image": "../../assets/drink.png",
+        "category": "beverages"
+        },
+        "combo1": {
+        "id": "combo1",
+        "name": "Movie Night Combo",
+        "description": "Large popcorn + 2 large sodas",
+        "price": 18.0,
+        "originalPrice": 20.0,
+        "savings": 2.0,
+        "image": "../../assets/meal1.jpg",
+        "category": "combos",
+        "featured": true
+        },
+        "combo2": {
+        "id": "combo2",
+        "name": "Family Pack",
+        "description": "2 large popcorns + 4 sodas + 2 candies",
+        "price": 35.0,
+        "originalPrice": 42.0,
+        "savings": 7.0,
+        "image": "../../assets/meal2.png",
+        "category": "combos",
+        "featured": true
+        }
+    }
+    },
+    "bookings": {
+    "templates": {
+        "confirmation": {
+        "subject": "Your Sinefolis Cinema Tickets",
+        "body": "Thank you for booking with Sinefolis Cinemas! Your booking details are below:\n\nMovie: {{movie}}\nDate & Time: {{date}} at {{time}}\nTheater: {{theater}}\nScreen: {{screen}}\nSeats: {{seats}}\n\nBooking Reference: {{bookingId}}\n\nPlease arrive 15 minutes before showtime. Enjoy the movie!"
+        },
+        "receipt": {
+        "header": "Sinefolis Cinemas - Receipt",
+        "footer": "Thank you for choosing Sinefolis Cinemas!"
+        }
+    },
+    "cancellationPolicy": {
+        "timeLimit": 24,
+        "refundPercentage": 80,
+        "serviceFeeRefundable": false
+        }
+    }
+}

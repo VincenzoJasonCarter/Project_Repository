@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Promos - Sinefolis Cinemas</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/promo.css">
+    <link rel="icon" href="../../assets/Sinefolis_Logo.png" type="image/x-icon">
+</head>
+<body>
+    <div id="loader" class="loader-overlay">
+        <div class="spinner"></div>
+    </div>
+    <script src="../js/loader.js"></script>
+    
+    <div class="navbar"></div>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/carousel.js"></script>
+    <script src="../js/fetchPromoBanner.js"></script>
+    <script src="../js/fade.js"></script>
+
+    <!-- Promo Banner Section -->
+    <section class="promo_banner">
+        <div class="carousel">
+            <div class="carousel_viewport">
+                <div class="carousel-track">
+                    <div class="carousel-item active">
+                        <img src="../../assets/promo_banner_1.jpg" alt="Promo Banner 1">
+                        <div class="carousel_caption">
+                            <h2>EXCLUSIVE CINEMA DEALS</h2>
+                            <p>Discover amazing savings on tickets, food, and experiences at Sinefolis Cinemas.</p>
+                            <button class="explore-btn">
+                                <span>🎟️</span>
+                                Explore Deals
+                            </button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../../assets/promo_banner_2.jpg" alt="Promo Banner 2">
+                        <div class="carousel_caption">
+                            <h2>FILM FESTIVAL SPECIALS</h2>
+                            <p>Join our annual film festival with special pricing and exclusive screenings.</p>
+                            <button class="explore-btn">
+                                <span>🎬</span>
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../../assets/promo_banner_3.jpg" alt="Promo Banner 3">
+                        <div class="carousel_caption">
+                            <h2>COUPLES NIGHT OUT</h2>
+                            <p>Perfect date night deals for you and your loved one. Romance meets cinema.</p>
+                            <button class="explore-btn">
+                                <span>💕</span>
+                                View Offers
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn prev" aria-label="Previous Promo">‹</button>
+            <button class="carousel-btn next" aria-label="Next Promo">›</button>
+        </div>
+    </section>
+
+    <!-- Hero Text Section -->
+    <section class="promo-text fade">
+        <div class="hero-content">
+            <h1 class="page-title">
+                <span class="title-icon">🎬</span>
+                Step Into the Spotlight of Savings
+            </h1>
+            <p class="page-tagline">
+                From epic discounts to blockbuster perks — experience exclusive promotions that elevate every screening. Only at Sinefolis Cinemas.
+            </p>
+        </div>
+    </section>
+
+    <!-- For You Section -->
+    <section class="promo-section">
+        <div class="section-header">
+            <h2 class="fade section-title">FOR YOU</h2>
+            <p class="fade section-description">The best deals, just for you!</p>
+        </div>
+        
+        <div class="top_promos fade">
+            <div class="promo_card" onclick="navigateTo('promo_details.html?id=20offfries')">
+                <div class="promo-image-container">
+                    <img src="../../assets/promo_cards/20offfries.png" alt="20% off Fries">
+                    <div class="promo-overlay">
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+                <div class="promo-info">
+                    <h3>20% Off Fries</h3>
+                    <p>Crispy savings on your favorite snacks</p>
+                </div>
+            </div>
+            
+            <div class="promo_card" onclick="navigateTo('promo_details.html?id=40off')">
+                <div class="promo-image-container">
+                    <img src="../../assets/promo_cards/40off.png" alt="40% off">
+                    <div class="promo-overlay">
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+                <div class="promo-info">
+                    <h3>40% Off Combo</h3>
+                    <p>Unbeatable combo meal savings</p>
+                </div>
+            </div>
+            
+            <div class="promo_card" onclick="navigateTo('promo_details.html?id=70off')">
+                <div class="promo-image-container">
+                    <img src="../../assets/promo_cards/70off.png" alt="70% off">
+                    <div class="promo-overlay">
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+                <div class="promo-info">
+                    <h3>70% Off Tickets</h3>
+                    <p>Massive savings on movie tickets</p>
+                </div>
+            </div>
+            
+            <div class="promo_card" onclick="navigateTo('promo_details.html?id=freedrink')">
+                <div class="promo-image-container">
+                    <img src="../../assets/promo_cards/freedrink.png" alt="Free Drink">
+                    <div class="promo-overlay">
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+                <div class="promo-info">
+                    <h3>Free Drink</h3>
+                    <p>Complimentary beverage with purchase</p>
+                </div>
+            </div>
+            
+            <div class="promo_card" onclick="navigateTo('promo_details.html?id=treatdeal')">
+                <div class="promo-image-container">
+                    <img src="../../assets/promo_cards/treatdeal.png" alt="Treat Deal">
+                    <div class="promo-overlay">
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+                <div class="promo-info">
+                    <h3>Treat Deal</h3>
+                    <p>Special treats for special moments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Film Festival Section -->
+    <section class="promo-section">
+        <div class="section-header">
+            <h2 class="fade section-title">FILM FESTIVAL 2025</h2>
+            <p class="fade section-description">Enjoy a good time with friends for less in this year's film festival!</p>
+        </div>
+        
+        <div class="film_festival fade">
+            <div class="promo_card featured" onclick="navigateTo('promo_details.html?id=film_fest_1')">
+                <div class="promo-image-container">
+                    <img src="../../assets/promo_cards/film_fest_1.jpg" alt="Film Festival Promo: 20% Off">
+                    <div class="promo_caption">
+                        <h1>20% OFF</h1>
+                    </div>
+                    <div class="promo-overlay">
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+                <div class="promo-info">
+                    <h3>Festival Discount</h3>
+                    <p>20% off all festival screenings</p>
+                </div>
+            </div>
+            
+            <div class="promo_card featured" onclick="navigateTo('promo_details.html?id=film_fest_2')">
+                <div class="promo-image-container">
+                    <img src="../../assets/promo_cards/film_fest_2.jpg" alt="Film Festival Promo: The More The Merrier">
+                    <div class="promo_caption">
+                        <h2>THE MORE THE MERRIER</h2>
+                    </div>
+                    <div class="promo-overlay">
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+                <div class="promo-info">
+                    <h3>Group Discount</h3>
+                    <p>Bigger groups, bigger savings</p>
+                </div>
+            </div>
+            
+            <div class="promo_card featured" onclick="navigateTo('promo_details.html?id=film_fest_3')">
+                <div class="promo-image-container">
+                    <img src="../../assets/promo_cards/film_fest_3.jpg" alt="Film Festival Promo: Meal Bundle">
+                    <div class="promo_caption">
+                        <h1>MEAL BUNDLE</h1>
+                    </div>
+                    <div class="promo-overlay">
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+                <div class="promo-info">
+                    <h3>Festival Bundle</h3>
+                    <p>Complete meal and movie package</p>
+                </div>
+            </div>
+            
+            <div class="promo_card featured" onclick="navigateTo('promo_details.html?id=film_fest_4')">
+                <div class="promo-image-container">
+                    <img src="../../assets/promo_cards/film_fest_4.jpg" alt="Film Festival Promo: 40% Off Ticket">
+                    <div class="promo_caption">
+                        <h1>40% OFF TICKET</h1>
+                    </div>
+                    <div class="promo-overlay">
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+                <div class="promo-info">
+                    <h3>Premium Savings</h3>
+                    <p>40% off premium festival tickets</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lovebird Discounts Section -->
+    <section class="promo-section">
+        <div class="section-header">
+            <h2 class="fade section-title">LOVEBIRD DISCOUNTS</h2>
+            <p class="fade section-description">Celebrate love with our special discounts for couples!</p>
+        </div>
+        
+        <div class="lovebirds fade">
+            <div class="promo_card romantic" onclick="navigateTo('promo_details.html?id=lovebirds_1')">
+                <div class="promo-image-container">
+                    <img src="../../assets/promo_cards/lovebirds_1.jpg" alt="Lovebird Discount: Buy 1 Get 1">
+                    <div class="promo_caption">
+                        <h2>BUY 1 GET 1</h2>
+                    </div>
+                    <div class="promo-overlay">
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+                <div class="promo-info">
+                    <h3>BOGO Special</h3>
+                    <p>Perfect for date nights</p>
+                </div>
+            </div>
+            
+            <div class="promo_card romantic" onclick="navigateTo('promo_details.html?id=lovebirds_2')">
+                <div class="promo-image-container">
+                    <img src="../../assets/promo_cards/lovebirds_2.jpg" alt="Lovebird Discount: Free Drink">
+                    <div class="promo_caption">
+                        <h1>FREE DRINK</h1>
+                    </div>
+                    <div class="promo-overlay">
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+                <div class="promo-info">
+                    <h3>Couples Treat</h3>
+                    <p>Free drinks for two</p>
+                </div>
+            </div>
+            
+            <div class="promo_card romantic" onclick="navigateTo('promo_details.html?id=lovebirds_3')">
+                <div class="promo-image-container">
+                    <img src="../../assets/promo_cards/lovebirds_3.jpg" alt="Lovebird Discount: 35% Off Tickets">
+                    <div class="promo_caption">
+                        <h2>35% OFF TICKETS</h2>
+                    </div>
+                    <div class="promo-overlay">
+                        <button class="btn-view">View Details</button>
+                    </div>
+                </div>
+                <div class="promo-info">
+                    <h3>Romance Savings</h3>
+                    <p>35% off couple tickets</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer"></div>
+    <script src="../js/footer.js"></script>
+</body>
+</html>

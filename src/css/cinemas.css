@@ -1,0 +1,150 @@
+
+
+.cinemas-page .main-content { /* If main-content class is used on this page */
+    padding-top: 40px;
+}
+
+.page-header-cinemas {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-top: 20px; /* Space from navbar */
+}
+
+.page-header-cinemas .page-title {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 2.8rem;
+    color: #1d3557; /* Dark blue */
+    margin-bottom: 10px;
+}
+
+.page-header-cinemas .page-subtitle {
+    font-size: 1.1rem;
+    color: #4a4a4a;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.city-section {
+    margin-bottom: 60px;
+}
+
+.city-section .city-name {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 2rem;
+    color: #e63946; /* Theme red */
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f1f1f1;
+    text-align: left;
+}
+
+.cinemas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+}
+
+.cinema-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cinema-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.cinema-map-placeholder {
+    width: 100%;
+    height: 200px; /* Or use padding-top for aspect ratio */
+    background-color: #e0e0e0; /* Fallback color */
+    overflow: hidden;
+}
+.cinema-map-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.cinema-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cinema-name {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.cinema-address,
+.cinema-phone {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+.cinema-phone {
+    margin-bottom: 15px;
+}
+
+.cinema-amenities {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.amenity-tag {
+    background-color: #f1faee; /* Light greenish-blue */
+    color: #1d3557; /* Dark blue text */
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.btn-view-showtimes {
+    background-color: #e63946; /* Theme red */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    margin-top: auto; /* Pushes button to the bottom of the card info */
+    text-decoration: none; /* If you change it to an <a> tag */
+    display: inline-block;
+}
+
+.btn-view-showtimes:hover {
+    background-color: #d62b39; /* Darker red */
+}
+
+/* Responsive adjustments for cinemas page */
+@media (max-width: 768px) {
+    .page-header-cinemas .page-title {
+        font-size: 2.2rem;
+    }
+    .city-section .city-name {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .cinemas-grid {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Cinemas - Sinefolis Cinemas</title>
+    <link rel="icon" href="../../assets/Sinefolis_Logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/cinemas.css">
+</head>
+<body>
+    <div id="loader" class="loader-overlay">
+        <div class="spinner"></div>
+    </div>
+    <script src="../js/loader.js"></script>
+
+    <div class="navbar">
+        </div>
+    <script src="../js/navbar.js"></script>
+
+    <main class="main-content cinemas-page">
+        <div class="container">
+            <header class="page-header-cinemas">
+                <h1 class="page-title">Our Cinemas</h1>
+                <p class="page-subtitle">Find a Sinefolis Cinema near you in Jakarta and Surabaya.</p>
+            </header>
+
+            <section id="jakartaCinemas" class="city-section">
+                <h2 class="city-name">Jakarta</h2>
+                <div class="cinemas-grid">
+                    <div class="cinema-card">
+                        <div class="cinema-map-placeholder">
+                            <img src="../../assets/locations/gi.jpg" alt="Map for Sinefolis Grand Indonesia">
+                        </div>
+                        <div class="cinema-info">
+                            <h3 class="cinema-name">Sinefolis Grand Indonesia</h3>
+                            <p class="cinema-address">Grand Indonesia Mall, Lantai 8, Jl. M.H. Thamrin No.1, Jakarta Pusat</p>
+                            <p class="cinema-phone">Phone: (021) 234-5678</p>
+                            <div class="cinema-amenities">
+                                <span class="amenity-tag">IMAX</span>
+                                <span class="amenity-tag">Dolby Atmos</span>
+                                <span class="amenity-tag">Premiere</span>
+                            </div>
+                            <button class="btn-view-showtimes" onclick="navigateTo('nowshowing.html')">View Showtimes</button>
+                        </div>
+                    </div>
+
+                    <div class="cinema-card">
+                        <div class="cinema-map-placeholder">
+                             <img src="../../assets/locations/pim.jpg" alt="Map for Sinefolis Pondok Indah Mall">
+                        </div>
+                        <div class="cinema-info">
+                            <h3 class="cinema-name">Sinefolis Pondok Indah Mall</h3>
+                            <p class="cinema-address">Pondok Indah Mall 2, Lantai 3, Jl. Metro Pondok Indah, Jakarta Selatan</p>
+                            <p class="cinema-phone">Phone: (021) 789-0123</p>
+                            <div class="cinema-amenities">
+                                <span class="amenity-tag">4DX</span>
+                                <span class="amenity-tag">Regular</span>
+                                <span class="amenity-tag">Kids Zone</span>
+                            </div>
+                            <button class="btn-view-showtimes" onclick="navigateTo('nowshowing.html')">View Showtimes</button>
+                        </div>
+                    </div>
+
+                    <div class="cinema-card">
+                        <div class="cinema-map-placeholder">
+                             <img src="../../assets/locations/mkg.jpg" alt="Map for Sinefolis Mall Kelapa Gading">
+                        </div>
+                        <div class="cinema-info">
+                            <h3 class="cinema-name">Sinefolis Mall Kelapa Gading</h3>
+                            <p class="cinema-address">Mall Kelapa Gading 3, Lantai 2, Jl. Boulevard Raya, Jakarta Utara</p>
+                            <p class="cinema-phone">Phone: (021) 456-7890</p>
+                            <div class="cinema-amenities">
+                                <span class="amenity-tag">Velvet Class</span>
+                                <span class="amenity-tag">3D</span>
+                                <span class="amenity-tag">Sweetbox</span>
+                            </div>
+                            <button class="btn-view-showtimes" onclick="navigateTo('nowshowing.html')">View Showtimes</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="surabayaCinemas" class="city-section">
+                <h2 class="city-name">Surabaya</h2>
+                <div class="cinemas-grid">
+                    <div class="cinema-card">
+                        <div class="cinema-map-placeholder">
+                             <img src="../../assets/locations/tp.jpg" alt="Map for Sinefolis Tunjungan Plaza">
+                        </div>
+                        <div class="cinema-info">
+                            <h3 class="cinema-name">Sinefolis Tunjungan Plaza</h3>
+                            <p class="cinema-address">Tunjungan Plaza 6, Lantai 5, Jl. Jend. Basuki Rachmat No.8-12, Surabaya</p>
+                            <p class="cinema-phone">Phone: (031) 543-2109</p>
+                            <div class="cinema-amenities">
+                                <span class="amenity-tag">IMAX</span>
+                                <span class="amenity-tag">Premiere</span>
+                            </div>
+                            <button class="btn-view-showtimes" onclick="navigateTo('nowshowing.html')">View Showtimes</button>
+                        </div>
+                    </div>
+
+                    <div class="cinema-card">
+                        <div class="cinema-map-placeholder">
+                             <img src="../../assets/locations/pakuwon.jpg" alt="Map for Sinefolis Pakuwon Mall">
+                        </div>
+                        <div class="cinema-info">
+                            <h3 class="cinema-name">Sinefolis Pakuwon Mall</h3>
+                            <p class="cinema-address">Pakuwon Mall, Lantai 2, Jl. Mayjend. Jonosewojo No.2, Surabaya</p>
+                            <p class="cinema-phone">Phone: (031) 678-9012</p>
+                            <div class="cinema-amenities">
+                                <span class="amenity-tag">4DX</span>
+                                <span class="amenity-tag">Gold Class</span>
+                            </div>
+                            <button class="btn-view-showtimes" onclick="navigateTo('nowshowing.html')">View Showtimes</button>
+                        </div>
+                    </div>
+                    <div class="cinema-card">
+                        <div class="cinema-map-placeholder">
+                             <img src="../../assets/locations/galaxy.jpg" alt="Map for Sinefolis Galaxy Mall">
+                        </div>
+                        <div class="cinema-info">
+                            <h3 class="cinema-name">Sinefolis Galaxy Mall</h3>
+                            <p class="cinema-address">Galaxy Mall 3, Lantai 4, Jl. Dr. Ir. H. Soekarno No.35-39, Mulyorejo, Surabaya</p>
+                            <p class="cinema-phone">Phone: (031) 246-8102</p>
+                            <div class="cinema-amenities">
+                                <span class="amenity-tag">Dolby Atmos</span>
+                                <span class="amenity-tag">Regular</span>
+                                <span class="amenity-tag">Studio SphereX</span>
+                            </div>
+                            <button class="btn-view-showtimes" onclick="navigateTo('nowshowing.html')">View Showtimes</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="footer">
+        </div>
+
+    <script src="../js/footer.js"></script>
+    <script src="../js/fade.js"></script>
+    <script src="../js/cinemas.js"></script>
+</body>
+</html>

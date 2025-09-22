@@ -1,0 +1,424 @@
+/* Now Showing Page Styles */
+body {
+    background-color: #faf7d2; /* */
+    font-family: 'Inter', sans-serif; /* */
+    color: #333; /* */
+}
+
+.main-content {
+    padding: 40px 0 80px; /* */
+    min-height: calc(100vh - 80px); /* */
+}
+
+.container {
+    max-width: 1200px; /* */
+    margin: 0 auto; /* */
+    padding: 0 20px; /* */
+}
+
+/* Section Header */
+.section-header {
+    display: flex; /* */
+    justify-content: space-between; /* */
+    align-items: center; /* */
+    margin-bottom: 40px; /* */
+    flex-wrap: wrap; /* */
+    gap: 20px; /* */
+}
+
+.page-title {
+    font-family: 'Epilogue', sans-serif; /* */
+    font-size: 2.5rem; /* */
+    font-weight: 700; /* */
+    color: #333; /* */
+    margin: 0; /* */
+}
+
+/* Toggle Buttons */
+.toggle-container {
+    display: flex; /* */
+    background-color: #fff; /* */
+    border-radius: 30px; /* */
+    padding: 5px; /* */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* */
+}
+
+.toggle-btn {
+    padding: 12px 24px; /* */
+    border: none; /* */
+    background: none; /* */
+    border-radius: 25px; /* */
+    font-family: 'Inter', sans-serif; /* */
+    font-size: 1rem; /* */
+    font-weight: 600; /* */
+    color: #666; /* */
+    cursor: pointer; /* */
+    transition: all 0.3s ease; /* */
+}
+
+.toggle-btn.active {
+    background-color: #e63946; /* */
+    color: #fff; /* */
+    box-shadow: 0 4px 8px rgba(230, 57, 70, 0.3); /* */
+}
+
+.toggle-btn:hover:not(.active) {
+    background-color: #f1f1f1; /* */
+    color: #333; /* */
+}
+
+/* Movies Section */
+.movies-section {
+    display: none; /* */
+    opacity: 0; /* */
+    transform: translateY(20px); /* */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* */
+}
+
+.movies-section.active {
+    display: block; /* */
+    opacity: 1; /* */
+    transform: translateY(0); /* */
+}
+
+.movies-grid {
+    display: grid; /* */
+    grid-template-columns: repeat(3, 1fr); /* */
+    gap: 30px; /* */
+}
+
+/* Movie Card */
+.movie-card { 
+    background-color: #fff; /* */
+    border-radius: 12px; /* */
+    overflow: hidden; /* */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* */
+    display: flex; 
+    flex-direction: column; 
+}
+
+.movie-card:hover {
+    transform: translateY(-5px); /* */ 
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* */
+}
+
+.movie-poster {
+    position: relative; /* */
+    padding-top: 140%; 
+    overflow: hidden; /* */
+    background-color: #f0f0f0; /* */
+}
+
+.movie-poster img {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; /* */
+    height: 100%; /* */
+    object-fit: cover; /* */
+    transition: transform 0.5s ease; /* */
+}
+
+.movie-card:hover .movie-poster img {
+    transform: scale(1.05); /* */
+}
+
+.movie-overlay {
+    position: absolute; /* */
+    bottom: 0; /* */
+    left: 0; /* */
+    right: 0; /* */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%); /* */
+    padding: 15px; /* */
+    display: flex; /* */
+    justify-content: space-around; /* Distribute Book Now and Details buttons */
+    align-items: center;
+    gap: 10px; /* */
+    opacity: 0; /* */
+    transform: translateY(20px); /* */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* */
+}
+
+.movie-card:hover .movie-overlay {
+    opacity: 1; /* */
+    transform: translateY(0); /* */
+}
+
+.btn-book, /* Applies to static .btn-book and dynamic .btn-book.dynamic-btn-show-schedule */
+.btn-notify,
+.btn-details {
+    padding: 10px 16px; /* */
+    border: none; /* */
+    border-radius: 6px; /* */
+    font-family: 'Inter', sans-serif; /* */
+    font-weight: 600; /* */
+    font-size: 0.9rem; /* */
+    cursor: pointer; /* */
+    transition: all 0.2s ease; /* */
+    flex-grow: 1; /* Make buttons in overlay take up space */
+    max-width: 150px; /* Prevent buttons from becoming too wide */
+}
+
+.btn-book { /* This is the main "Book Now" on the card to trigger modal */
+    background-color: #e63946; /* */
+    color: #fff; /* */
+}
+.btn-book:hover {
+    background-color: #d62b39; /* */
+}
+
+.btn-notify {
+    background-color: #457b9d; /* */
+    color: #fff; /* */
+}
+.btn-notify:hover {
+    background-color: #3a6a89; /* */
+}
+
+.btn-details {
+    background-color: rgba(255, 255, 255, 0.1); /* */
+    color: #fff; /* */
+    border: 1px solid #fff; /* */
+}
+.btn-details:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* */
+}
+
+.movie-info {
+    padding: 15px; /* */
+    flex-grow: 1; 
+}
+
+.movie-title {
+    font-family: 'Epilogue', sans-serif; /* */
+    font-size: 1.2rem; /* */
+    font-weight: 700; /* */
+    margin: 0 0 10px; /* */
+    color: #333; /* */
+    white-space: nowrap; /* */
+    overflow: hidden; /* */
+    text-overflow: ellipsis; /* */
+}
+
+.movie-meta {
+    display: flex; /* */
+    align-items: center; /* */
+    gap: 15px; /* */
+    margin-bottom: 8px; /* */
+}
+
+.movie-rating {
+    background-color: #f1faee; /* */
+    color: #1d3557; /* */
+    padding: 4px 8px; /* */
+    border-radius: 4px; /* */
+    font-size: 0.8rem; /* */
+    font-weight: 600; /* */
+}
+
+.movie-duration,
+.movie-release {
+    color: #666; /* */
+    font-size: 0.9rem; /* */
+}
+
+.movie-genre {
+    color: #888; /* */
+    font-size: 0.9rem; /* */
+}
+
+/* REMOVED: Styles for .showtimes-display-area and its children (like .showtime-date-block-dynamic) */
+/* as showtimes are now meant to be in the modal overlay. */
+
+/* START: MODAL Styles (Make sure this is compatible with your global.css modal styles if any) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.7); /* Darker overlay */
+    align-items: center; /* For vertical centering */
+    justify-content: center; /* For horizontal centering */
+}
+
+.modal-content-showtimes { /* Specific class for showtimes modal */
+    background-color: #fff;
+    margin: auto; /* Centering */
+    padding: 25px 30px;
+    border: none;
+    width: 90%;
+    max-width: 650px; 
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    max-height: 80vh; /* Limit height and allow internal scroll */
+    display: flex;
+    flex-direction: column;
+}
+
+.close-modal-btn { /* Style for the 'X' close button */
+    color: #888;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+.close-modal-btn:hover,
+.close-modal-btn:focus {
+    color: #e63946; /* Theme color on hover */
+    text-decoration: none;
+}
+
+#showtimeModalMovieTitle { /* Title inside the modal */
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: 'Epilogue', sans-serif;
+    color: #333;
+    font-size: 1.8rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.modal-body-showtimes { /* Container for the actual showtime listings */
+    overflow-y: auto; /* Allow scrolling if many showtimes */
+    padding-right: 10px; /* For scrollbar spacing */
+}
+
+.modal-body-showtimes .showtime-date-block-modal {
+    margin-bottom: 18px;
+}
+.modal-body-showtimes .showtime-date-block-modal h5 { /* Date (e.g., "On Mon, Jan 15") */
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #e63946; /* Theme color */
+    margin-bottom: 10px;
+}
+.modal-body-showtimes .showtime-theater-block-modal {
+    margin-bottom: 12px;
+    padding-left: 10px; /* Indent theater info */
+}
+.modal-body-showtimes .showtime-theater-block-modal h6 { /* Theater Name */
+    font-size: 1em;
+    font-weight: 600;
+    color: #1d3557; /* Dark blue */
+    margin-bottom: 6px;
+}
+.modal-body-showtimes .showtime-screen-block-modal {
+    padding-left: 15px; /* Further indent screen info */
+    margin-bottom: 8px;
+}
+.modal-body-showtimes .showtime-screen-block-modal .screen-name-modal { /* Screen Name */
+    font-size: 0.9em;
+    color: #457b9d; /* Medium blue */
+    margin-bottom: 6px;
+    font-style: italic;
+}
+.modal-body-showtimes .showtime-slots-wrapper-modal { /* Wrapper for the time buttons */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Spacing between time buttons */
+}
+.modal-body-showtimes .modal-showtime-button { /* Actual time slot button */
+    background-color: #f1faee; /* Light greenish blue */
+    color: #1d3557; /* Dark blue text */
+    border: 1px solid #a8dadc; /* Light blue border */
+    padding: 8px 15px;
+    border-radius: 20px; /* Pill shape */
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.modal-body-showtimes .modal-showtime-button:hover {
+    background-color: #457b9d; /* Medium blue */
+    color: white;
+    border-color: #457b9d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+/* END: MODAL Styles */
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .movies-grid {
+        grid-template-columns: repeat(2, 1fr); /* */
+    }
+}
+
+@media (max-width: 768px) {
+    .section-header {
+        flex-direction: column; /* */
+        align-items: flex-start; /* */
+    }
+    
+    .toggle-container {
+        width: 100%; /* */
+        justify-content: center; /* */
+    }
+    
+    .toggle-btn {
+        flex: 1; /* */
+        text-align: center; /* */
+    }
+    .modal-content-showtimes {
+        width: 95%;
+        padding: 20px;
+        margin: 5% auto;
+    }
+    #showtimeModalMovieTitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .movies-grid {
+        grid-template-columns: 1fr; /* */
+    }
+    
+    .movie-poster {
+        padding-top: 125%; /* */
+    }
+    
+    .page-title {
+        font-size: 2rem; /* */
+    }
+
+    .btn-book, .btn-details, .btn-notify {
+        font-size: 0.8rem; /* Smaller buttons in overlay on mobile */
+        padding: 8px 12px;
+    }
+    .modal-body-showtimes .modal-showtime-button { /* Smaller showtime buttons in modal on mobile */
+        font-size: 0.85em;
+        padding: 6px 10px;
+    }
+}
+
+/* Animation for page load */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); } /* */
+    to { opacity: 1; transform: translateY(0); } /* */
+}
+
+.main-content {
+    animation: fadeIn 0.6s ease-out; /* */
+}
+
+.dynamic-movie-item:hover { /* Ensure hover for dynamic cards if using this class */
+    transform: translateY(-5px); /* */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* */
+}
+.dynamic-movie-item:hover .movie-poster img {
+    transform: scale(1.05); /* */
+}

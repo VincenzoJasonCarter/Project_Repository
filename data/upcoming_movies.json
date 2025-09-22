@@ -1,0 +1,228 @@
+[
+  {
+    "id": "thunderbolts-upcoming",
+    "title": "Thunderbolts",
+    "poster": "../../assets/movie_cards/thunderbolts.jpg",
+    "backdrop": "../../assets/movie_cards/thunderbolts.jpg",
+    "rating": "TBA",
+    "duration": "TBA",
+    "year": "2025",
+    "genres": ["Action", "Adventure", "Sci-Fi"],
+    "synopsis": "A group of supervillains are recruited to go on missions for the government. Details are currently under wraps.",
+    "imdbRating": "N/A",
+    "rtRating": "N/A",
+    "audienceScore": "N/A",
+    "director": "TBA",
+    "producer": "TBA",
+    "writer": "TBA",
+    "cast": [
+      { "name": "Actor A", "character": "Character 1", "photo": "https://placehold.co/150x225/D3D3D3/000000?text=Actor+A" },
+      { "name": "Actor B", "character": "Character 2", "photo": "https://placehold.co/150x225/D3D3D3/000000?text=Actor+B" }
+    ]
+  },
+  {
+    "id": "final-destination-bloodlines-upcoming",
+    "title": "Final Destination: Bloodlines",
+    "poster": "../../assets/movie_cards/fdd.jpg",
+    "backdrop": "../../assets/movie_cards/fdd.jpg",
+    "rating": "R",
+    "duration": "TBA",
+    "year": "2025",
+    "genres": ["Horror", "Thriller"],
+    "synopsis": "The next installment in the Final Destination series, where death itself hunts down those who escape their fate.",
+    "imdbRating": "N/A",
+    "rtRating": "N/A",
+    "audienceScore": "N/A",
+    "director": "TBA",
+    "producer": "TBA",
+    "writer": "TBA",
+    "cast": [
+      { "name": "Actor C", "character": "Character 1", "photo": "https://placehold.co/150x225/D3D3D3/000000?text=Actor+C" },
+      { "name": "Actor D", "character": "Character 2", "photo": "https://placehold.co/150x225/D3D3D3/000000?text=Actor+D" }
+    ]
+  },
+  {
+    "id": "avatar-3",
+    "title": "Avatar 3",
+    "poster": "../../assets/movie_cards/avatar_3.jpg",
+    "backdrop": "../../assets/movie_cards/avatar_3.jpg",
+    "rating": "TBA",
+    "duration": "TBA",
+    "year": "2025",
+    "genres": ["Sci-Fi", "Action", "Adventure"],
+    "synopsis": "The next chapter in the Avatar saga, continuing the story of Jake Sully and Neytiri on Pandora.",
+    "imdbRating": "N/A",
+    "rtRating": "N/A",
+    "audienceScore": "N/A",
+    "director": "James Cameron",
+    "producer": "James Cameron, Jon Landau",
+    "writer": "James Cameron",
+    "cast": [
+      { "name": "Sam Worthington", "character": "Jake Sully", "photo": "https://placehold.co/150x225/D3D3D3/000000?text=S.+Worthington" },
+      { "name": "Zoe Saldana", "character": "Neytiri", "photo": "https://placehold.co/150x225/D3D3D3/000000?text=Z.+Saldana" }
+    ]
+  },
+  {
+    "id": "blade",
+    "title": "Blade",
+    "poster": "../../assets/movie_cards/blade.jpg",
+    "backdrop": "../../assets/movie_cards/blade.jpg",
+    "rating": "R",
+    "duration": "TBA",
+    "year": "2025",
+    "genres": ["Action", "Horror", "Fantasy"],
+    "synopsis": "A reboot of the Blade franchise, featuring the iconic vampire hunter.",
+    "imdbRating": "N/A",
+    "rtRating": "N/A",
+    "audienceScore": "N/A",
+    "director": "TBA",
+    "producer": "TBA",
+    "writer": "TBA",
+    "cast": [
+      { "name": "Mahershala Ali", "character": "Blade", "photo": "https://placehold.co/150x225/D3D3D3/000000?text=M.+Ali" }
+    ]
+  },
+  {
+    "id": "the-marvels-upcoming",
+    "title": "The Marvels",
+    "poster": "../../assets/movie_cards/marvel.jpg",
+    "backdrop": "../../assets/movie_cards/marvel.jpg",
+    "rating": "PG-13",
+    "duration": "TBA",
+    "year": "2025", 
+    "genres": ["Action", "Adventure", "Fantasy"],
+    "synopsis": "Carol Danvers, Kamala Khan, and Monica Rambeau team up when their powers become entangled.",
+    "imdbRating": "N/A",
+    "rtRating": "N/A",
+    "audienceScore": "N/A",
+    "director": "Nia DaCosta",
+    "producer": "Kevin Feige",
+    "writer": "Nia DaCosta, Megan McDonnell, Elissa Karasik",
+    "cast": [
+      { "name": "Brie Larson", "character": "Carol Danvers / Captain Marvel", "photo": "https://placehold.co/150x225/D3D3D3/000000?text=B.+Larson" },
+      { "name": "Iman Vellani", "character": "Kamala Khan / Ms. Marvel", "photo": "https://placehold.co/150x225/D3D3D3/000000?text=I.+Vellani" }
+    ]
+  },
+  {
+    "id": "the-truman-show-upcoming",
+    "title": "The Truman Show (Re-release)",
+    "poster": "../../assets/movie_cards/truman.jpg",
+    "backdrop": "../../assets/movie_cards/truman.jpg",
+    "rating": "PG",
+    "duration": "103 min",
+    "year": "2026",
+    "genres": ["Comedy", "Drama", "Sci-Fi"],
+    "synopsis": "A special re-release of the classic film where an insurance salesman discovers his whole life is actually a reality TV show.",
+    "imdbRating": "8.2",
+    "rtRating": "94%",
+    "audienceScore": "89%",
+    "director": "Peter Weir",
+    "producer": "Scott Rudin, Andrew Niccol, Edward S. Feldman, Adam Schroeder",
+    "writer": "Andrew Niccol",
+    "cast": [
+      { "name": "Jim Carrey", "character": "Truman Burbank", "photo": "https://placehold.co/150x225/D3D3D3/000000?text=J.+Carrey" }
+    ]
+  },
+  {
+    "id": "dune-part-two",
+    "title": "Dune: Part Two",
+    "poster": "../../assets/movie_cards/dune_2.jpg",
+    "backdrop": "../../assets/movie_cards/dune_2.jpg",
+    "rating": "PG-13",
+    "duration": "TBA",
+    "year": "2025",
+    "genres": ["Sci-Fi", "Adventure", "Drama"],
+    "synopsis": "Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.",
+    "imdbRating": "N/A",
+    "rtRating": "N/A",
+    "audienceScore": "N/A",
+    "director": "Denis Villeneuve",
+    "producer": "Mary Parent, Denis Villeneuve, Cale Boyter",
+    "writer": "Jon Spaihts, Denis Villeneuve",
+    "cast": [
+      { "name": "Timothée Chalamet", "character": "Paul Atreides", "photo": "https://placehold.co/150x225/D3D3D3/000000?text=T.+Chalamet" },
+      { "name": "Zendaya", "character": "Chani", "photo": "https://placehold.co/150x225/D3D3D3/000000?text=Zendaya" }
+    ]
+  },
+  {
+    "id": "gladiator-2-upcoming",
+    "title": "Gladiator II",
+    "poster": "https://placehold.co/300x450/6c757d/ffffff?text=Gladiator+II",
+    "backdrop": "https://placehold.co/1200x600/6c757d/ffffff?text=Gladiator+II+Backdrop",
+    "rating": "TBA",
+    "duration": "TBA",
+    "year": "2026",
+    "genres": ["Action", "Drama", "Adventure"],
+    "synopsis": "A follow-up to the historical epic Gladiator, focusing on Lucius, the son of Lucilla and nephew of Commodus.",
+    "imdbRating": "N/A",
+    "rtRating": "N/A",
+    "audienceScore": "N/A",
+    "director": "Ridley Scott",
+    "producer": "TBA",
+    "writer": "TBA",
+    "cast": [
+      { "name": "Paul Mescal", "character": "Lucius", "photo": "https://placehold.co/150x225/D3D3D3/000000?text=P.+Mescal" }
+    ]
+  },
+  {
+    "id": "fight-club",
+    "title": "Fight Club (Anniversary Re-release)",
+    "poster": "https://placehold.co/300x450/6c757d/ffffff?text=Fight+Club",
+    "backdrop": "https://placehold.co/1200x600/6c757d/ffffff?text=Fight+Club+Backdrop",
+    "rating": "R",
+    "duration": "139 min",
+    "year": "2026",
+    "genres": ["Drama", "Thriller"],
+    "synopsis": "An insomniac office worker looking for a way to change his life crosses paths with a devil-may-care soap maker and they form an underground fight club that evolves into something much, much more.",
+    "imdbRating": "8.8",
+    "rtRating": "79%",
+    "audienceScore": "96%",
+    "director": "David Fincher",
+    "producer": "Art Linson, Ceán Chaffin, Ross Grayson Bell",
+    "writer": "Jim Uhls",
+    "cast": [
+      { "name": "Brad Pitt", "character": "Tyler Durden", "photo": "https://placehold.co/150x225/D3D3D3/000000?text=B.+Pitt" },
+      { "name": "Edward Norton", "character": "The Narrator", "photo": "https://placehold.co/150x225/D3D3D3/000000?text=E.+Norton" }
+    ]
+  },
+  {
+    "id": "furiosa-a-mad-max-saga",
+    "title": "Furiosa: A Mad Max Saga",
+    "poster": "https://placehold.co/300x450/6c757d/ffffff?text=Furiosa",
+    "backdrop": "https://placehold.co/1200x600/6c757d/ffffff?text=Furiosa+Backdrop",
+    "rating": "R",
+    "duration": "TBA",
+    "year": "2025",
+    "genres": ["Action", "Adventure", "Sci-Fi"],
+    "synopsis": "The origin story of renegade warrior Furiosa before she teamed up with Mad Max in 'Fury Road'.",
+    "imdbRating": "N/A",
+    "rtRating": "N/A",
+    "audienceScore": "N/A",
+    "director": "George Miller",
+    "producer": "George Miller, Doug Mitchell",
+    "writer": "George Miller, Nick Lathouris",
+    "cast": [
+      { "name": "Anya Taylor-Joy", "character": "Furiosa", "photo": "https://placehold.co/150x225/D3D3D3/000000?text=A.+Taylor-Joy" }
+    ]
+  },
+  {
+    "id": "the-green-mile",
+    "title": "The Green Mile (Anniversary Re-release)",
+    "poster": "https://placehold.co/300x450/6c757d/ffffff?text=The+Green+Mile",
+    "backdrop": "https://placehold.co/1200x600/6c757d/ffffff?text=The+Green+Mile+Backdrop",
+    "rating": "R",
+    "duration": "189 min",
+    "year": "2026",
+    "genres": ["Crime", "Drama", "Fantasy"],
+    "synopsis": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",
+    "imdbRating": "8.6",
+    "rtRating": "79%",
+    "audienceScore": "94%",
+    "director": "Frank Darabont",
+    "producer": "David Valdes, Frank Darabont",
+    "writer": "Frank Darabont",
+    "cast": [
+      { "name": "Tom Hanks", "character": "Paul Edgecomb", "photo": "https://placehold.co/150x225/D3D3D3/000000?text=T.+Hanks" }
+    ]
+  }
+]

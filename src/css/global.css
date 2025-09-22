@@ -1,0 +1,375 @@
+* {
+    font-family: 'Epilogue', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #faf7d2;
+    color: #443627;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.sine {
+  color: whitesmoke;
+  font-family: 'Epilogue', sans-serif;
+}
+
+.folis {
+  color: red;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    /* On desktop: Logo left, .navbar_collapse takes rest of space.
+       On mobile: Toggler left, Logo next, .navbar_collapse hidden/block. */
+    padding: 0 2%; /* Adjust side padding if needed */
+    height: 65px; /* Your desired desktop navbar height */
+    background-color: black;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- Hamburger Toggler --- */
+.navbar-toggler {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px; /* Adjust size of hamburger/X icon */
+    cursor: pointer;
+    padding: 10px 15px;
+    order: -1; /* Places it to the far left on mobile */
+    margin-right: 10px; /* Space between toggler and logo on mobile */
+    line-height: 1; /* Helps keep icon centered */
+}
+
+/* --- Logo --- */
+.navbar_logo {
+    order: 0; /* After toggler on mobile, first on desktop */
+    flex-shrink: 0; /* Prevent logo from shrinking */
+}
+.navbar_logo .logo-link { /* The 'HOME' link styled as logo */
+    font-weight: bold;
+    font-size: 1.3em; /* Make it a bit larger */
+    color: white; /* Ensure it's visible */
+    padding: 8px 0; /* Adjust padding if it's just text/logo */
+}
+.navbar_logo .logo-link:hover {
+    background-color: transparent !important; /* Override general .navbar_item hover */
+    color: #f0e68c !important; /* Gold hover for logo text */
+    transform: scale(1.05); /* Keep a slight scale if desired */
+}
+
+/* --- Collapsible Area --- */
+.navbar_collapse {
+    display: flex; /* Horizontal layout on desktop */
+    align-items: center;
+    flex-grow: 1; /* Takes up available space */
+    justify-content: space-between; /* Pushes nav links and auth buttons apart */
+}
+
+/* --- Navigation Links Section --- */
+.navbar_nav {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Helps center the nav links */
+    flex-grow: 1; /* Allows this section to expand, centering the links */
+}
+
+/* --- Authentication Buttons Section --- */
+.navbar_auth {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* Prevent auth buttons from shrinking too much */
+}
+
+/* --- General Navbar Item Styling --- */
+.navbar_item {
+    padding: 8px 15px; /* Default padding */
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: clamp(0.85rem, 1.8vw, 1rem);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    border-radius: 25px;
+    white-space: nowrap;
+}
+.navbar_item:hover:not(.logo-link) { /* General hover for nav links, excluding the main logo link */
+    color: #f0e68c;
+    background-color: #2e251b;
+    transform: scale(1.05);
+}
+
+/* --- Specific Styling for Login/Signup Buttons --- */
+.navbar_button { /* Inherits .navbar_item, adds specific button looks */
+    margin-left: 10px;
+}
+
+.navbar_button.login-button {
+    border: 1px solid #f0e68c;
+    color: #f0e68c;
+    background-color: transparent;
+    padding: 7px 14px; /* Adjust padding for border */
+}
+.navbar_button.login-button:hover {
+    background-color: #f0e68c;
+    color: black;
+    /* transform: scale(1.05); // Covered by .navbar_item:hover if not overridden */
+}
+
+.navbar_button.signup-button {
+    background-color: #f0e68c;
+    color: black;
+}
+.navbar_button.signup-button:hover {
+    background-color: #d4b848; /* Darker gold */
+    color: black;
+    /* transform: scale(1.05); // Covered by .navbar_item:hover if not overridden */
+}
+
+
+/* === HEADING & PARAGRAPH Base Styles === */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Epilogue', sans-serif;
+    color: #443627;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    text-align: center; /* Default for section titles */
+}
+
+p {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    margin-bottom: 1em;
+    text-align: center; /* Default for descriptive paragraphs under titles */
+}
+
+/* === FOOTER === */
+.footer {
+  background-color: black;
+  color: white;
+  padding: 40px 5%;
+  font-family: 'Inter', sans-serif;
+  margin-top: 60px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-logo { /* This class should be on the image itself or its direct wrapper in footer.html */
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.footer-contact {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-contact h4 {
+  margin-bottom: 15px;
+  font-family: 'Epilogue', sans-serif;
+  color: #f0e68c;
+}
+
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.footer-contact .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-legal {
+  flex-basis: 100%;
+  font-size: 0.8rem;
+  color: #CCCCCC;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* === LOADER === */
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.loader-overlay.active {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ffffff33;
+  border-top: 6px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* === FADE ANIMATION === */
+.fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === UTILITY CLASSES === */
+.section-container { /* You might use this to wrap content inside sections */
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/* === RESPONSIVE STYLES === */
+
+@media (max-width: 768px) {
+    /* --- Responsive Navbar --- */
+    .navbar {
+        justify-content: flex-start; /* Align toggler and logo to the start */
+        flex-wrap: wrap;
+        height: 55px; /* Your desired mobile navbar height */
+        padding: 0 3%;
+    }
+
+    .navbar-toggler {
+        display: block; /* Show the hamburger icon */
+    }
+
+    .navbar_logo .logo-link {
+        font-size: 1.2em; /* Slightly smaller for mobile if needed */
+        padding: 6px 0; /* Adjust padding for mobile if needed */
+    }
+
+    .navbar_collapse {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column; /* Stack items vertically when open */
+        width: 100%;
+        background-color: black; /* Background for the dropdown */
+        position: absolute;
+        top: 55px; /* Position below the navbar (must match mobile navbar height) */
+        left: 0;
+        right: 0;
+        padding: 0; /* Remove padding, items will have their own */
+        box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+        border-top: 1px solid #443627; /* Separator line */
+        order: 1; /* Ensures it's rendered below the top bar items if flex-wrap is active */
+    }
+
+    .navbar_collapse.open {
+        display: flex; /* Show the dropdown */
+    }
+
+    .navbar_nav, .navbar_auth {
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch; /* Make items take full available width */
+    }
+
+    .navbar_nav .navbar_item,
+    .navbar_auth .navbar_item { /* This targets all items in dropdown */
+        padding: 12px 20px; /* Larger padding for easier tapping */
+        text-align: left;   /* Align text to the left in dropdown */
+        border-bottom: 1px solid #2e251b; /* Separator line between items */
+        margin: 0;
+        border-radius: 0; /* No rounding if items are full width */
+    }
+    .navbar_nav .navbar_item:hover:not(.logo-link), /* Ensure logo-link doesn't get this hover in dropdown */
+    .navbar_auth .navbar_item:hover {
+        background-color: #2e251b !important; /* Consistent hover for dropdown items, !important to override specificity if needed */
+        transform: none;
+    }
+
+    .navbar_nav .navbar_item:last-of-type {
+         border-bottom: none;
+    }
+    .navbar_auth {
+        margin-top: 0; /* Reset margin, use padding and border for separation */
+        padding-top: 0;
+        border-top: 1px solid #443627; /* Separator line before auth buttons */
+    }
+
+    .navbar_button { /* Auth buttons in dropdown */
+        margin: 0; /* Remove individual margins, rely on full width and padding */
+        display: block;
+        text-align: center;
+        padding: 12px 20px; /* Consistent with other dropdown items */
+        /* border-radius: 0; // Keep their button-like rounding or flatten like other items */
+    }
+     /* To remove border from the very last item in the entire dropdown: */
+    .navbar_collapse > div:last-child > .navbar_item:last-child {
+        border-bottom: none;
+    }
+}

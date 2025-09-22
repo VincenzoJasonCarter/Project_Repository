@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets - Sinefolis Cinemas</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/booking.css">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader" class="loader-overlay">
+        <div class="spinner"></div>
+    </div>
+    <script src="../js/loader.js"></script>
+    
+    <div class="navbar"></div>
+    <script src="../js/navbar.js"></script>
+
+    <div class="booking-container">
+        <div class="booking-header">
+            <div class="movie-summary">
+                <img id="movie-poster" src="/placeholder.svg?height=120&width=80" alt="Movie Poster" class="summary-poster">
+                <div class="summary-info">
+                    <h1 id="movie-title">Loading...</h1>
+                    <div class="summary-meta">
+                        <span id="movie-rating" class="rating">-</span>
+                        <span id="movie-duration" class="duration">- min</span>
+                        <span id="movie-genre" class="genre">Loading...</span>
+                    </div>
+                    <div class="booking-details">
+                        <span id="theater-name">Loading...</span>
+                        <span id="showtime">-</span>
+                        <span id="show-date">-</span>
+                        <span id="screen-name" style="display:none;"></span>
+                        <span id="show-format" style="display:none;"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="booking-progress">
+                <div class="progress-step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <span>Select Seats</span>
+                </div>
+                <div class="progress-step" data-step="2">
+                    <div class="step-number">2</div>
+                    <span>Add-ons</span>
+                </div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-number">3</div>
+                    <span>Payment</span>
+                </div>
+                <div class="progress-step" data-step="4">
+                    <div class="step-number">4</div>
+                    <span>Confirmation</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="booking-content">
+            <div class="booking-step active" id="step-1">
+                <div class="step-content">
+                    <div class="seat-selection-area">
+                        <h2 class="step-title">Select Your Seats</h2>
+                        
+                        <div class="screen-area">
+                            <div class="screen">SCREEN</div>
+                        </div>
+                        
+                        <div class="seat-map" id="seat-map">
+                            <div class="loading-placeholder">
+                                <p>Loading seat map...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="seat-legend">
+                            <div class="legend-item">
+                                <div class="legend-seat available"></div>
+                                <span>Available</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-seat selected"></div>
+                                <span>Selected</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-seat occupied"></div>
+                                <span>Occupied</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="ticket-types">
+                        <h3>Ticket Types</h3>
+                        <div id="format-pricing" style="display: none; margin-bottom: 10px; font-size: 0.9em; color: #555;">
+                            Additional fee for <span id="format-name"></span> format: <span id="format-price"></span>
+                        </div>
+                        <div class="ticket-type-list" id="ticket-types">
+                            <div class="loading-placeholder">
+                                <p>Loading ticket options...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-step" id="step-2">
+                <div class="step-content">
+                    <h2 class="step-title">Add-ons & Concessions</h2>
+                    
+                    <div class="addons-grid" id="addons-grid"> <div class="loading-placeholder">
+                            <p>Loading available add-ons...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-step" id="step-3">
+                <div class="step-content">
+                    <h2 class="step-title">Payment Information</h2>
+                    
+                    <div class="payment-form">
+                        <div class="payment-methods">
+                            <h3>Payment Method</h3>
+                            <div class="payment-options">
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="card" checked>
+                                    <div class="option-content">
+                                        <span class="option-icon">💳</span>
+                                        <span>Credit/Debit Card</span>
+                                    </div>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="paypal">
+                                    <div class="option-content">
+                                        <span class="option-icon">🅿️</span>
+                                        <span>PayPal</span>
+                                    </div>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="apple">
+                                    <div class="option-content">
+                                        <span class="option-icon">🍎</span>
+                                        <span>Apple Pay</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="card-form" id="card-form">
+                            <div class="form-group">
+                                <label for="card-number">Card Number</label>
+                                <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiry">Expiry Date</label>
+                                    <input type="text" id="expiry" placeholder="MM/YY" maxlength="5">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" placeholder="123" maxlength="4">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cardholder">Cardholder Name</label>
+                                <input type="text" id="cardholder" placeholder="John Doe">
+                            </div>
+                        </div>
+                        
+                        <div class="billing-info">
+                            <h3>Contact Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" placeholder="john@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" id="phone" placeholder="+1 (555) 123-4567">
+                                </div>
+                            </div>
+                        </div>
+                         <div class="form-group terms-agreement" style="margin-top: 20px;">
+                            <input type="checkbox" id="terms-checkbox">
+                            <label for="terms-checkbox">I agree to the <a href="#" class="terms-link">Terms and Conditions</a>.</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-step" id="step-4">
+                <div class="step-content">
+                    <div class="confirmation-content">
+                        <div class="success-icon">✅</div>
+                        <h2>Booking Confirmed!</h2>
+                        <p>Your tickets have been successfully booked. A confirmation email has been sent to your email address.</p>
+                        
+                        <div class="booking-summary">
+                            <h3>Booking Details</h3>
+                            <div class="summary-item">
+                                <span>Booking ID:</span>
+                                <span id="booking-id">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Movie:</span>
+                                <span id="confirm-movie">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Date & Time:</span>
+                                <span id="confirm-datetime">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Theater:</span>
+                                <span id="confirm-theater">-</span>
+                            </div>
+                            <div class="summary-item"> <span>Screen & Format:</span>
+                                <div>
+                                    <span id="confirm-screen">-</span> (<span id="confirm-format">-</span>)
+                                </div>
+                            </div>
+                            <div class="summary-item">
+                                <span>Seats:</span>
+                                <span id="confirm-seats">-</span>
+                            </div>
+                        </div>
+                        
+                        <div class="confirmation-actions">
+                            <button class="btn-primary" id="download-tickets">
+                                <span>📱</span>
+                                Download Tickets
+                            </button>
+                            <button class="btn-secondary" id="email-tickets">
+                                <span>📧</span>
+                                Email Tickets
+                            </button>
+                            <button class="btn-secondary" id="add-calendar" style="margin-top:10px;">
+                                <span>📅</span>
+                                Add to Calendar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="booking-sidebar">
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                
+                <div class="summary-section">
+                    <h4>Tickets</h4>
+                    <div id="ticket-summary">
+                        <div class="loading-placeholder">
+                            <p>Loading...</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="summary-section" id="addons-summary" style="display: none;">
+                    <h4>Add-ons</h4>
+                    <div id="addons-list">
+                        </div>
+                </div>
+                
+                <div class="summary-section">
+                    <h4>Selected Seats</h4>
+                    <div id="selected-seats">
+                        <span class="no-seats">No seats selected</span>
+                    </div>
+                </div>
+                
+                <div class="price-breakdown">
+                    <div class="price-item">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                    <div class="price-item">
+                        <span>Service Fee:</span>
+                        <span id="service-fee">$0.00</span>
+                    </div>
+                    <div class="price-item">
+                        <span>Taxes & Fees:</span>
+                        <span id="taxes">$0.00</span>
+                    </div>
+                    <div class="price-item total">
+                        <span>Total:</span>
+                        <span id="total">$0.00</span>
+                    </div>
+                </div>
+                
+                <div class="booking-actions">
+                    <button class="btn-back" id="back-btn" style="display: none;">
+                        <span>←</span>
+                        Back
+                    </button>
+                    <button class="btn-continue" id="continue-btn">
+                        Continue
+                        <span>→</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="error-message" id="booking-error" style="display: none;">
+        <div class="error-content">
+            <h2>Booking Error</h2>
+            <p id="error-text">There was an issue loading the booking information.</p>
+            <button onclick="window.location.href='/';" class="btn-primary">Go Home</button> </div>
+    </div>
+
+    <div id="seat-selection-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Select Ticket Type for Seat <span id="selected-seat-id"></span></h2>
+            <div id="ticket-type-buttons">
+                </div>
+            <div class="modal-actions">
+                <button id="confirm-seat-selection" class="btn-primary">Confirm</button>
+                <button id="cancel-seat-selection" class="btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="terms-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Terms and Conditions</h2>
+            <p>This is where the terms and conditions text would go. For this example, we'll keep it brief.</p>
+            <ul>
+                <li>All sales are final.</li>
+                <li>Refunds and exchanges are subject to the cinema's policy.</li>
+                <li>Please arrive at least 15 minutes before your showtime.</li>
+                <li>By clicking "Accept", you agree to these terms.</li>
+            </ul>
+            <div class="modal-actions">
+                <button id="accept-terms" class="btn-primary">Accept</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="../js/footer.js"></script>
+    <script src="../js/booking.js"></script> </body>
+</html>

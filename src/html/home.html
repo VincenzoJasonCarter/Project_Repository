@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../../assets/Sinefolis_Logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Sinefolis Cinemas</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/home.css">
+    </head>
+<body>
+    <div id="loader" class="loader-overlay">
+        <div class="spinner"></div>
+    </div>
+    <script src="../js/loader.js"></script>
+    <div class="navbar"></div>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/carousel.js"></script>
+    <script src="../js/fetchCarouselCaption.js"></script>
+    <script src="../js/fade.js"></script>
+
+    <div class="hero_section">
+        <div class="carousel">
+            <div class="carousel_viewport">
+                <div class="carousel-track">
+                    <div class="carousel-item active">
+                        <img src="../../assets/hero_section_1.jpeg" alt="Featured Movie">
+                        <div class="carousel_caption">
+                            <h2>SPACE JAM: A NEW LEGACY</h2>
+                            <p>Welcome to the Jam! Experience the ultimate basketball adventure in stunning IMAX.</p>
+                            <button class="play-btn">
+                                <span>▶</span>
+                                Watch Trailer
+                            </button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../../assets/hero_section_2.jpg" alt="Featured Movie">
+                        <div class="carousel_caption">
+                            <h2>INTERSTELLAR</h2>
+                            <p>A journey beyond the stars. Experience Christopher Nolan's masterpiece like never before.</p>
+                            <button class="play-btn">
+                                <span>▶</span>
+                                Watch Trailer
+                            </button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../../assets/hero_section_3.jpg" alt="Featured Movie">
+                        <div class="carousel_caption">
+                            <h2>TENET</h2>
+                            <p>Time runs out. Don't think. Feel. Experience the mind-bending thriller in 4DX.</p>
+                            <button class="play-btn">
+                                <span>▶</span>
+                                Watch Trailer
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn prev" aria-label="Previous slide">‹</button>
+            <button class="carousel-btn next" aria-label="Next slide">›</button>
+        </div>
+
+        <div class="cinema-features">
+            <div class="tech_section fade">
+                <div class="tech_item">
+                    <img src="../../assets/IMAX_LOGO.png" alt="IMAX Experience" class="tech_logo">
+                    <span class="tech_label">IMAX</span>
+                </div>
+                <div class="tech_item">
+                    <img src="../../assets/4DX_LOGO.png" alt="4DX Experience" class="tech_logo">
+                    <span class="tech_label">4DX</span>
+                </div>
+                <div class="tech_item">
+                    <img src="../../assets/3D_LOGO.png" alt="3D Experience" class="tech_logo">
+                    <span class="tech_label">3D</span>
+                </div>
+            </div>
+            
+            <div class="branches fade">
+                <div class="stat-item">
+                    <div class="stat-icon">🏙️</div>
+                    <div class="stat-content">
+                        <h3>2</h3>
+                        <p>Cities</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">📍</div>
+                    <div class="stat-content">
+                        <h3>6</h3>
+                        <p>Locations</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">🎬</div>
+                    <div class="stat-content">
+                        <h3>56</h3>
+                        <p>Screens</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero_text">
+            <h1 class="fade">Welcome to Sinefolis Cinemas</h1>
+            <p class="fade">Your gateway to the world of cinema. Experience movies like never before.</p>
+        </div>
+    </div>
+
+    <section class="content-section nowshowing-section">
+        <div class="section-header">
+            <h2 class="fade">NOW SHOWING</h2>
+            <p class="fade">Currently airing movies that you don't want to miss!</p>
+        </div>
+        
+        <div class="movies-container fade">
+            <div class="movie-grid">
+                <div class="movie-card" onclick="navigateToMovie('interstellar')">
+                    <div class="movie-poster">
+                        <img src="../../assets/movie_cards/interstellar.jpg" alt="Interstellar">
+                        <div class="movie-overlay">
+                            <button class="btn-book"  onclick="event.stopPropagation(); navigateTo('nowshowing.html?showModalForMovie=interstellar')">Book Now</button>
+                            <button class="btn-details" onclick="event.stopPropagation(); navigateTo('movie_details.html?id=interstellar')">Details</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Interstellar</h3>
+                        <div class="movie-meta">
+                            <span class="movie-rating">PG-13</span>
+                            <span class="movie-duration">169 min</span>
+                        </div>
+                        <div class="movie-genre">Sci-Fi, Adventure</div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateTo('now-you-see-me')">
+                    <div class="movie-poster">
+                        <img src="../../assets/movie_cards/now_you_see_me.jpg" alt="Now You See Me">
+                        <div class="movie-overlay">
+                            <button class="btn-book" onclick="event.stopPropagation(); navigateTo('nowshowing.html?showModalForMovie=now-you-see-me')">Book Now</button>
+                            <button class="btn-details" onclick="event.stopPropagation(); navigateTo('movie_details.html?id=now-you-see-me')">Details</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Now You See Me</h3>
+                        <div class="movie-meta">
+                            <span class="movie-rating">PG-13</span>
+                            <span class="movie-duration">115 min</span>
+                        </div>
+                        <div class="movie-genre">Thriller, Mystery</div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovie('space-jam')">
+                    <div class="movie-poster">
+                        <img src="../../assets/movie_cards/space_jam.jpg" alt="Space Jam: A New Legacy">
+                        <div class="movie-overlay">
+                            <button class="btn-book" onclick="event.stopPropagation(); navigateTo('nowshowing.html?showModalForMovie=space-jam-a-new-legacy')">Book Now</button>
+                            <button class="btn-details" onclick="event.stopPropagation(); navigateTo('movie_details.html?id=space-jam-a-new-legacy')">Details</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Space Jam: A New Legacy</h3>
+                        <div class="movie-meta">
+                            <span class="movie-rating">PG</span>
+                            <span class="movie-duration">115 min</span>
+                        </div>
+                        <div class="movie-genre">Animation, Comedy</div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovie('tenet')">
+                    <div class="movie-poster">
+                        <img src="../../assets/movie_cards/tenet.jpg" alt="Tenet">
+                        <div class="movie-overlay">
+                            <button class="btn-book" onclick="event.stopPropagation(); navigateTo('nowshowing.html?showModalForMovie=tenet')">Book Now</button>
+                            <button class="btn-details" onclick="event.stopPropagation(); navigateTo('movie_details.html?id=tenet')">Details</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Tenet</h3>
+                        <div class="movie-meta">
+                            <span class="movie-rating">PG-13</span>
+                            <span class="movie-duration">150 min</span>
+                        </div>
+                        <div class="movie-genre">Action, Sci-Fi</div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovie('joker')">
+                    <div class="movie-poster">
+                        <img src="../../assets/movie_cards/joker.jpg" alt="Joker">
+                        <div class="movie-overlay">
+                            <button class="btn-book" onclick="event.stopPropagation(); navigateTo('nowshowing.html?showModalForMovie=joker')">Book Now</button>
+                            <button class="btn-details" onclick="event.stopPropagation(); navigateTo('movie_details.html?id=joker')">Details</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Joker</h3>
+                        <div class="movie-meta">
+                            <span class="movie-rating">R</span>
+                            <span class="movie-duration">122 min</span>
+                        </div>
+                        <div class="movie-genre">Crime, Drama</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="viewmore-container">
+                <button class="viewmore" onclick="navigateTo('nowshowing.html')" aria-label="View all now showing movies">
+                    <span>→</span>
+                    <div class="popup">View All Movies</div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section upcoming-section">
+        <div class="section-header">
+            <h2 class="fade">UPCOMING MOVIES</h2>
+            <p class="fade">Movies that are coming soon to Sinefolis Cinemas.</p>
+        </div>
+        
+        <div class="movies-container fade">
+            <div class="movie-grid">
+                <div class="movie-card" onclick="navigateToMovie('thunderbolts')">
+                    <div class="movie-poster">
+                        <img src="../../assets/movie_cards/thunderbolts.jpg" alt="Thunderbolts">
+                        <div class="movie-overlay">
+                            <button class="btn-notify">Notify Me</button>
+                            <button class="btn-details">Details</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Thunderbolts</h3>
+                        <div class="movie-meta">
+                            <span class="movie-rating">PG-13</span>
+                            <span class="movie-release">Jul 26, 2024</span>
+                        </div>
+                        <div class="movie-genre">Action, Adventure</div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovie('final-destination')">
+                    <div class="movie-poster">
+                        <img src="../../assets/movie_cards/fdd.jpg" alt="Final Destination: Bloodlines">
+                        <div class="movie-overlay">
+                            <button class="btn-notify">Notify Me</button>
+                            <button class="btn-details">Details</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Final Destination: Bloodlines</h3>
+                        <div class="movie-meta">
+                            <span class="movie-rating">R</span>
+                            <span class="movie-release">Sep 12, 2024</span>
+                        </div>
+                        <div class="movie-genre">Horror, Thriller</div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovie('fight-club')">
+                    <div class="movie-poster">
+                        <img src="../../assets/movie_cards/fight_club.jpg" alt="Fight Club">
+                        <div class="movie-overlay">
+                            <button class="btn-notify">Notify Me</button>
+                            <button class="btn-details">Details</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Fight Club</h3>
+                        <div class="movie-meta">
+                            <span class="movie-rating">R</span>
+                            <span class="movie-release">Aug 5, 2024</span>
+                        </div>
+                        <div class="movie-genre">Drama, Thriller</div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovie('truman-show')">
+                    <div class="movie-poster">
+                        <img src="../../assets/movie_cards/truman.jpg" alt="The Truman Show">
+                        <div class="movie-overlay">
+                            <button class="btn-notify">Notify Me</button>
+                            <button class="btn-details">Details</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>The Truman Show</h3>
+                        <div class="movie-meta">
+                            <span class="movie-rating">PG</span>
+                            <span class="movie-release">Aug 19, 2024</span>
+                        </div>
+                        <div class="movie-genre">Comedy, Drama</div>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="navigateToMovie('green-mile')">
+                    <div class="movie-poster">
+                        <img src="../../assets/movie_cards/green_mile.jpg" alt="The Green Mile">
+                        <div class="movie-overlay">
+                            <button class="btn-notify">Notify Me</button>
+                            <button class="btn-details">Details</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>The Green Mile</h3>
+                        <div class="movie-meta">
+                            <span class="movie-rating">R</span>
+                            <span class="movie-release">Oct 3, 2024</span>
+                        </div>
+                        <div class="movie-genre">Crime, Drama</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="viewmore-container">
+                <button class="viewmore" onclick="navigateTo('nowshowing.html#upcoming')" aria-label="View all upcoming movies">
+                    <span>→</span>
+                    <div class="popup">View All Upcoming</div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section promos-section">
+        <div class="section-header">
+            <h2 class="fade">TOP USED PROMOS</h2>
+            <p class="fade">Check out the most popular promos among our customers!</p>
+        </div>
+        
+        <div class="promos-container fade">
+            <div class="promo-grid">
+                <div class="promo-card" onclick="navigateTo('promo_details.html?id=70off')">
+                    <div class="promo-image">
+                        <img src="../../assets/promo_cards/70off.png" alt="70% Off Promo">
+                        <div class="promo-overlay">
+                            <button class="btn-claim">Claim Now</button>
+                        </div>
+                    </div>
+                    <div class="promo-info">
+                        <h3>70% Off Tickets</h3>
+                        <p>Valid until Dec 31, 2024</p>
+                    </div>
+                </div>
+
+                <div class="promo-card" onclick="navigateTo('promo_details.html?id=40off')">
+                    <div class="promo-image">
+                        <img src="../../assets/promo_cards/40off.png" alt="40% Off Promo">
+                        <div class="promo-overlay">
+                            <button class="btn-claim">Claim Now</button>
+                        </div>
+                    </div>
+                    <div class="promo-info">
+                        <h3>40% Off Combo</h3>
+                        <p>Valid until Nov 30, 2024</p>
+                    </div>
+                </div>
+
+                <div class="promo-card" onclick="navigateTo('promo_details.html?id=20offfries')">
+                    <div class="promo-image">
+                        <img src="../../assets/promo_cards/20offfries.png" alt="20% Off Fries Promo">
+                        <div class="promo-overlay">
+                            <button class="btn-claim">Claim Now</button>
+                        </div>
+                    </div>
+                    <div class="promo-info">
+                        <h3>20% Off Fries</h3>
+                        <p>Valid until Oct 31, 2024</p>
+                    </div>
+                </div>
+
+                <div class="promo-card" onclick="navigateTo('promo_details.html?id=freedrink')">
+                    <div class="promo-image">
+                        <img src="../../assets/promo_cards/freedrink.png" alt="Free Drink Promo">
+                        <div class="promo-overlay">
+                            <button class="btn-claim">Claim Now</button>
+                        </div>
+                    </div>
+                    <div class="promo-info">
+                        <h3>Free Drink</h3>
+                        <p>Valid until Dec 15, 2024</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="viewmore-container">
+                <button class="viewmore" onclick="navigateTo('promo.html')" aria-label="View all promos">
+                    <span>→</span>
+                    <div class="popup">View All Promos</div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section vip-memberships-section">
+        <div class="section-header">
+            <h2 class="fade">VIP MEMBERSHIPS</h2>
+            <p class="fade">Unlock exclusive benefits and elevate your cinema experience.</p>
+        </div>
+        
+        <div class="memberships-container fade">
+            <div class="membership-grid">
+                <div class="membership-card" onclick="navigateTo('membership_details.html?tier=silver')">
+                    <div class="membership-icon">
+                        <img src="../../assets/vip_silver_icon.png" alt="Silver Tier Icon"> </div>
+                    <div class="membership-info">
+                        <h3>Silver Tier</h3>
+                        <ul>
+                            <li>10% Off All Tickets</li>
+                            <li>Small Popcorn on Your Birthday</li>
+                            <li>Early Access to Select Screenings</li>
+                            <li>Member-Only Newsletters</li>
+                        </ul>
+                        <button class="btn-learn-more" onclick="event.stopPropagation(); navigateTo('membership_details.html?tier=silver')">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="membership-card" onclick="navigateTo('membership_details.html?tier=gold')">
+                    <div class="membership-icon">
+                        <img src="../../assets/vip_gold_icon.png" alt="Gold Tier Icon"> </div>
+                    <div class="membership-info">
+                        <h3>Gold Tier</h3>
+                        <ul>
+                            <li>15% Off All Tickets & Concessions</li>
+                            <li>Free Medium Birthday Combo</li>
+                            <li>Priority Booking Window (24h early)</li>
+                            <li>Access to Members Lounge (select locations)</li>
+                            <li>2x Bonus Points on Purchases</li>
+                        </ul>
+                        <button class="btn-learn-more" onclick="event.stopPropagation(); navigateTo('membership_details.html?tier=gold')">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="membership-card" onclick="navigateTo('membership_details.html?tier=platinum')">
+                    <div class="membership-icon">
+                        <img src="../../assets/vip_platinum_icon.png" alt="Platinum Tier Icon"> </div>
+                    <div class="membership-info">
+                        <h3>Platinum Tier</h3>
+                        <ul>
+                            <li>20% Off All Tickets & Concessions</li>
+                            <li>Free Large Birthday Combo & Movie Ticket</li>
+                            <li>Unlimited Priority Booking (48h early)</li>
+                            <li>VIP Lounge Access & Concierge Service</li>
+                            <li>Complimentary Valet Parking (where available)</li>
+                            <li>Exclusive Invites to Premieres</li>
+                        </ul>
+                        <button class="btn-learn-more" onclick="event.stopPropagation(); navigateTo('membership_details.html?tier=platinum')">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="viewmore-container">
+                <button class="viewmore" onclick="navigateTo('memberships.html')" aria-label="View all membership options">
+                    <span>→</span>
+                    <div class="popup">View All Memberships</div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer"></div>
+    <script src="../js/footer.js"></script>
+    <script src="../js/loadMovieDetails.js"></script>
+    <script src="../js/booking.js"></script>
+</body>
+</html>

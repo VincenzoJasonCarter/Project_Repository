@@ -1,0 +1,214 @@
+/* movie_details_shared.css - Styles common to different movie detail pages */
+.movie-details-page .main-content { /* Target main-content within a details page */
+    padding-top: 0; /* Remove top padding if backdrop is used */
+}
+
+.movie-backdrop {
+    width: 100%;
+    height: 40vh; /* Adjust as needed, or e.g. 400px */
+    background-size: cover;
+    background-position: center center;
+    background-color: #222; /* Fallback */
+    margin-bottom: -80px; /* Overlap with header to pull content up, adjust as needed */
+    position: relative;
+}
+
+.movie-backdrop::after { /* Optional: add a gradient overlay to the backdrop */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px; /* Adjust gradient height */
+    background: linear-gradient(to top, rgba(250, 247, 210, 1) 20%, rgba(250, 247, 210, 0) 100%); /* Match body background */
+}
+
+
+.details-container {
+    position: relative; /* To sit above the backdrop gradient */
+    z-index: 2;
+    padding-top: 20px; 
+}
+
+.details-header {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    align-items: flex-end; /* Align items to the bottom of the flex container */
+}
+
+.poster-container {
+    flex-shrink: 0;
+}
+
+.movie-poster-details {
+    width: 220px; /* Adjust as needed */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    object-fit: cover;
+}
+
+.title-info {
+    padding-bottom: 10px; /* Align with bottom of poster */
+}
+
+.title-info h1 {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 2.8rem;
+    margin: 0 0 10px 0;
+    color: #1d3557; /* Dark blue */
+}
+
+.meta-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #4a4a4a;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+}
+.meta-item:not(:last-child)::after {
+    content: '|';
+    margin-left: 15px;
+    color: #ccc;
+}
+
+.movie-rating-badge {
+    background-color: #e63946; /* Theme red */
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.genres-list {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.genre-tag {
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.actions-bar button {
+    margin-right: 10px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    /* Inherits .btn-primary-details or other specific button styles */
+}
+
+.btn-primary-details { /* Example for primary action buttons on details page */
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.btn-primary-details:hover {
+    background-color: #c02d39;
+}
+
+
+.details-body section {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.details-body h2 {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.synopsis-section p {
+    line-height: 1.7;
+    color: #555;
+}
+
+.crew-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+.crew-member strong {
+    color: #1d3557;
+}
+
+.cast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+.cast-member-item img.cast-photo {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    background-color: #f0f0f0; /* Fallback */
+}
+.cast-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.cast-character {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.error-message-details {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #e63946;
+    padding: 40px;
+}
+
+/* Responsive shared details */
+@media (max-width: 768px) {
+    .details-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .poster-container {
+        margin-bottom: 20px;
+    }
+    .title-info {
+        padding-bottom: 0;
+    }
+    .title-info h1 {
+        font-size: 2.2rem;
+    }
+    .meta-info, .genres-list, .actions-bar {
+        justify-content: center;
+    }
+    .movie-backdrop {
+        height: 30vh;
+        margin-bottom: -60px;
+    }
+}

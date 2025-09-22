@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promo Details - Sinefolis Cinemas</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/promo_details.css">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar"></div>
+    <script src="../js/navbar.js"></script>
+    <div id="loader" class="loader-overlay">
+        <div class="spinner"></div>
+    </div>
+    <script src="../js/loader.js"></script>
+    <script src="../js/fade.js"></script>
+
+    <div class="promo-container">
+        <div class="promo-hero">
+            <div class="promo-image-section">
+                <img id="promo-image" src="/placeholder.svg" alt="Promotion Image" class="promo-image">
+                <div class="promo-badge">
+                    <span>🎟️</span>
+                    EXCLUSIVE OFFER
+                </div>
+            </div>
+            
+            <div class="promo-header">
+                <h1 id="promo-title" class="fade"></h1>
+                <p class="tagline" id="promo-tagline"></p>
+            </div>
+        </div>
+
+        <div class="promo-content">
+            <div class="content-grid">
+                <div class="main-content">
+                    <div class="content-section">
+                        <div class="section-icon">📝</div>
+                        <h2>Description</h2>
+                        <p id="promo-description"></p>
+                    </div>
+
+                    <div class="content-section">
+                        <div class="section-icon">✅</div>
+                        <h2>Key Prerequisites</h2>
+                        <p id="promo-prerequisite"></p>
+                    </div>
+
+                    <div id="promo-detailed-terms-section" class="content-section">
+                        <div class="section-icon">📋</div>
+                        <h2>Terms and Conditions</h2>
+                        <ul id="promo-detailed-terms"></ul>
+                    </div>
+                </div>
+
+                <div class="sidebar-content">
+                    <div class="promo-card">
+                        <div class="card-header">
+                            <h3>Promo Details</h3>
+                        </div>
+                        
+                        <div class="promo-code-section">
+                            <label>Promo Code</label>
+                            <div class="promo-code-container">
+                                <span id="promo-code" class="code-display">N/A</span>
+                                <button id="copy-promo-button" class="copy-button" aria-label="Copy promo code">
+                                    <span class="copy-icon">📋</span>
+                                    Copy
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="promo-validity-section" class="validity-section" style="display:none;">
+                            <label>Valid Until</label>
+                            <div class="validity-display">
+                                <span class="validity-icon">⏰</span>
+                                <span id="promo-validity"></span>
+                            </div>
+                        </div>
+
+                        <a href="#" id="promo-cta-button" class="cta-button" style="display:none;">
+                            <span>🎬</span>
+                            Claim Offer
+                        </a>
+                    </div>
+
+                    <div class="help-section">
+                        <h4>Need Help?</h4>
+                        <p>Contact our customer service for assistance with this promotion.</p>
+                        <button class="help-button">
+                            <span>💬</span>
+                            Get Support
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/loadPromo.js"></script>
+</body>
+</html>

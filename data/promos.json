@@ -1,0 +1,86 @@
+{
+  "20offfries": {
+    "title": "20% Off Fries",
+    "description": "Indulge in our delicious, crispy golden fries! Purchase any movie ticket for an upcoming show and receive an exclusive 20% discount on a serving of your favorite cinema snack, perfect for munching during the movie.",
+    "image": "../../assets/promo_cards/20offfries.png",
+    "code": "FRIES20",
+    "prerequisite": "This special offer is applicable when you purchase one or more movie tickets for any film. Simply present your valid movie ticket (for the same day) at the concessions stand to redeem your discount on one regular-sized fries."
+  },
+  "40off": {
+    "title": "40% Off Tickets",
+    "description": "Catch your most anticipated films for less! Enjoy a fantastic 40% discount on standard adult tickets for specially selected movie showings during off-peak hours. Check our online schedule for eligible sessions and save big on your next cinema visit.",
+    "image": "../../assets/promo_cards/40off.png",
+    "code": "BIGSCREEN40",
+    "prerequisite": "This promotion is exclusively available for movie sessions on weekdays (Monday to Friday) that start before 6:00 PM. It is not valid on weekends, public holidays, or for premium seating/special screenings unless specified."
+  },
+  "70off": {
+    "title": "70% Off Combo Meals",
+    "description": "Elevate your movie experience with our best-value combo! Grab a large, freshly popped popcorn and a refreshing large soft drink with an incredible 70% off the usual price when you add it to your ticket purchase.",
+    "image": "../../assets/promo_cards/70off.png",
+    "code": "MOVIEMUNCH",
+    "prerequisite": "This amazing combo discount can only be availed at the time of purchasing your movie tickets, either online or at the counter. Offer not valid for separate concession stand purchases without an accompanying ticket transaction."
+  },
+  "freedrink": {
+    "title": "Free Drink with Any Popcorn",
+    "description": "What's popcorn without a refreshing beverage? Purchase any size of our delicious signature popcorn (small, medium, or large) and we'll treat you to one standard-sized soft drink or bottled water, completely on the house!",
+    "image": "../../assets/promo_cards/freedrink.png",
+    "code": "FREEDRINK",
+    "prerequisite": "To redeem your free drink, please ensure your popcorn purchase is made directly at our cinema concession stands during your visit. This offer is not applicable for online pre-orders or third-party food delivery app orders."
+  },
+  "treatdeal": {
+    "title": "Treat Deal",
+    "description": "Craving a variety of delightful movie snacks? Our special Treat Deal bundle includes a carefully selected assortment of popular cinema snacks, offering great value all for the unbeatable price of just Rp 35.000!",
+    "image": "../../assets/promo_cards/treatdeal.png",
+    "code": "TREAT35K",
+    "prerequisite": "This popular Treat Deal is subject to availability and is offered on a first-come, first-served basis each day. Grab yours quickly as stocks for this special bundle are limited and may vary by location!"
+  },
+  "film_fest_1": {
+    "title": "Film Fest 2025: 20% OFF",
+    "description": "Immerse yourself in the magic of cinema during our highly anticipated Film Festival 2025! Get a special 20% discount on individual tickets for any and all films featured throughout the entire festival period. Discover new favorites and critically acclaimed masterpieces.",
+    "image": "../../assets/promo_cards/film_fest_1.jpg",
+    "code": "FEST2025",
+    "prerequisite": "The 20% discount is valid across all available standard ticket categories for Film Festival screenings. This offer cannot be combined with other ongoing promotions or group booking discounts unless explicitly stated."
+  },
+  "film_fest_2": {
+    "title": "Film Fest: The More the Merrier",
+    "description": "Movies are always better enjoyed with friends and family! During Film Fest 2025, gather your crew and benefit from 'The More the Merrier' group discount when purchasing three or more tickets together for the same festival film session.",
+    "image": "../../assets/promo_cards/film_fest_2.jpg",
+    "code": "GROUPFUN",
+    "prerequisite": "To qualify for this Film Festival group discount, your booking must include a minimum of three individuals purchasing tickets for the same movie screening in a single transaction. Subject to seat availability."
+  },
+  "film_fest_3": {
+    "title": "Festival Meal Bundle",
+    "description": "Complete your Film Festival cinematic experience with our specially curated Festival Meal Bundle! Add a delicious, discounted meal combo (e.g., a gourmet hotdog with a large soft drink, or a similar offering) when you purchase your festival movie ticket.",
+    "image": "../../assets/promo_cards/film_fest_3.jpg",
+    "code": "MEALFEST",
+    "prerequisite": "This bundled meal offer is exclusively available as an add-on at the point of movie ticket purchase for any Film Festival 2025 screening, either online or at the box office. It cannot be purchased as a standalone item."
+  },
+  "film_fest_4": {
+    "title": "40% Off Festival Tickets",
+    "description": "Don't miss this unbeatable Film Festival flash deal! For a strictly limited time, all individual tickets for every movie screening during the festival week are available at a massive 40% discount. This is your best chance to see more for less!",
+    "image": "../../assets/promo_cards/film_fest_4.jpg",
+    "code": "FEST40",
+    "prerequisite": "This exceptional 40% discount is a time-sensitive flash promotion valid only for tickets purchased and used during the official Film Festival 2025 week. Please check the specific start and end dates of this offer. Limited availability."
+  },
+  "lovebirds_1": {
+    "title": "Buy 1 Get 1 for Couples",
+    "description": "Make it a memorable date night at Sinefolis Cinemas with your special someone! With our Lovebird Buy 1 Get 1 Free ticket offer, purchase one standard adult movie ticket and receive a second one for the same session absolutely free.",
+    "image": "../../assets/promo_cards/lovebirds_1.jpg",
+    "code": "LOVEBIRD21",
+    "prerequisite": "This romantic offer is designed exclusively for couples and requires tickets to be booked or purchased in pairs (i.e., two tickets processed per transaction) for the same movie session to automatically receive the second ticket free of charge."
+  },
+  "lovebirds_2": {
+    "title": "Free Drink for Couples",
+    "description": "Toast to your love and enhance your movie date! When you and your partner purchase two movie tickets together for any film, we'll add a complimentary standard-sized soft drink each to make your cinema outing even sweeter and more enjoyable.",
+    "image": "../../assets/promo_cards/lovebirds_2.jpg",
+    "code": "SIPLOVE",
+    "prerequisite": "This free drink offer is valid upon the purchase of two standard movie tickets in a single transaction for the same film screening. Each ticket holder in the pair is eligible for one complimentary standard soft drink or bottled water."
+  },
+  "lovebirds_3": {
+    "title": "35% Off Couple Tickets",
+    "description": "Share the magic of the big screen with your significant other and enjoy fantastic savings! Get a special 35% discount on the total price of your movie tickets when you book for two people together through our online channels.",
+    "image": "../../assets/promo_cards/lovebirds_3.jpg",
+    "code": "COUPLE35",
+    "prerequisite": "This exclusive 35% discount for couples is available only for bookings made via our official Sinefolis Cinemas website or mobile application. This offer is not valid for walk-in purchases at the cinema box office or concierge."
+  }
+}

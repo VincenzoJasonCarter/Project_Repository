@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Notified - Sinefolis Cinemas</title>
+    <link rel="icon" href="../../assets/Sinefolis_Logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/notify.css">
+</head>
+<body>
+    <div class="navbar">
+        </div>
+    <script src="../js/navbar.js"></script>
+
+    <div id="loader" class="loader-overlay">
+        <div class="spinner"></div>
+    </div>
+    <script src="../js/loader.js"></script>
+
+    <main class="main-content notify-page">
+        <div class="container">
+            <div class="notify-container">
+                <h1 class="page-title-notify">Stay Updated!</h1>
+                <p class="notify-intro">
+                    Get notified when tickets become available for <strong id="notifyMovieTitle">[Movie Title Here]</strong>.
+                </p>
+
+                <form id="notifyForm" class="notify-form">
+                    <div class="form-group-notify">
+                        <label for="userEmail" class="form-label-notify">Enter your email address:</label>
+                        <input type="email" id="userEmail" name="userEmail" class="form-input-notify" placeholder="you@example.com" required>
+                    </div>
+                    <input type="hidden" id="notifyMovieId" name="movieId">
+
+                    <button type="submit" class="btn-primary-notify">Notify Me</button>
+                </form>
+
+                <div id="notifyMessage" class="notify-message" style="display: none;">
+                    </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="footer">
+        </div>
+    <script src="../js/footer.js"></script>
+    <script src="../js/notify.js"></script>
+</body>
+</html>

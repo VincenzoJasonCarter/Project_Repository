@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Movie Details - Sinefolis Cinemas</title> {/* Title will be updated by JS */}
+    <link rel="icon" href="../../assets/Sinefolis_Logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/movie_details_shared.css"> <link rel="stylesheet" href="../css/upcoming_details.css"> </head>
+<body>
+    <div class="navbar">
+        </div>
+    <script src="../js/navbar.js"></script>
+
+    <div id="loader" class="loader-overlay">
+        <div class="spinner"></div>
+    </div>
+    <script src="../js/loader.js"></script>
+
+    <main class="main-content movie-details-page">
+        <div class="movie-backdrop" id="movieBackdrop">
+            </div>
+
+        <div class="container details-container">
+            <div class="details-header">
+                <div class="poster-container">
+                    <img id="moviePoster" src="https://placehold.co/300x450/e0e0e0/777?text=Poster" alt="Movie Poster" class="movie-poster-details">
+                </div>
+                <div class="title-info">
+                    <h1 id="movieTitle">Loading Movie Title...</h1>
+                    <div class="meta-info">
+                        <span id="movieYear" class="meta-item"></span>
+                        <span id="movieRating" class="meta-item movie-rating-badge"></span>
+                        <span id="movieDuration" class="meta-item"></span>
+                    </div>
+                    <div id="movieGenres" class="genres-list">
+                        </div>
+                    <div class="actions-bar">
+                        <button id="notifyMeBtn" class="btn-primary-details btn-notify-upcoming">
+                            <span>🔔</span> Notify Me When Available
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-body">
+                <section class="synopsis-section">
+                    <h2>Synopsis</h2>
+                    <p id="movieSynopsis">Loading synopsis...</p>
+                </section>
+
+                <section class="crew-section">
+                    <h2>Crew</h2>
+                    <div class="crew-grid">
+                        <div class="crew-member">
+                            <strong>Director:</strong> <span id="movieDirector">TBA</span>
+                        </div>
+                        <div class="crew-member">
+                            <strong>Writer(s):</strong> <span id="movieWriter">TBA</span>
+                        </div>
+                        <div class="crew-member">
+                            <strong>Producer(s):</strong> <span id="movieProducer">TBA</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cast-section">
+                    <h2>Main Cast</h2>
+                    <div id="movieCast" class="cast-grid">
+                        <p>Loading cast information...</p>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <div class="footer">
+        </div>
+    <script src="../js/footer.js"></script>
+    <script src="../js/upcoming_details.js"></script> {/* You will create this JS file */}
+</body>
+</html>

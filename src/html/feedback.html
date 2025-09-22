@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Sinefolis Cinemas</title>
+    <link rel="icon" href="../../assets/Sinefolis_Logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/feedback.css">
+</head>
+<body>
+    <div id="loader" class="loader-overlay">
+        <div class="spinner"></div>
+    </div>
+    <script src="../js/loader.js"></script>
+
+    <div class="navbar"></div>
+    <script src="../js/navbar.js"></script>
+
+    <main class="feedback-page">
+        <div class="feedback-container">
+            <h2>We Value Your Feedback!</h2>
+            <p>Please share your thoughts with us to help improve your Sinéfolis experience.</p>
+            
+            <form id="feedbackForm" novalidate>
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+                    <small class="error-message" id="fullNameError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address">
+                    <small class="error-message" id="emailError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g., 081234567890">
+                    <small class="error-message" id="phoneError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="feedbackType">Feedback Type</label>
+                    <select id="feedbackType" name="feedbackType">
+                        <option value="">-- Select a type --</option>
+                        <option value="compliment">Compliment</option>
+                        <option value="complaint">Complaint</option>
+                        <option value="suggestion">Suggestion</option>
+                        <option value="question">Question</option>
+                    </select>
+                    <small class="error-message" id="feedbackTypeError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="feedbackMessage">Your Feedback</label>
+                    <textarea id="feedbackMessage" name="feedbackMessage" rows="5" placeholder="Write your feedback here..."></textarea>
+                    <small class="error-message" id="feedbackMessageError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label>Overall Experience Rating</label>
+                    <div class="rating-group">
+                        <input type="radio" id="rating1" name="rating" value="1"><label for="rating1">1</label>
+                        <input type="radio" id="rating2" name="rating" value="2"><label for="rating2">2</label>
+                        <input type="radio" id="rating3" name="rating" value="3"><label for="rating3">3</label>
+                        <input type="radio" id="rating4" name="rating" value="4"><label for="rating4">4</label>
+                        <input type="radio" id="rating5" name="rating" value="5"><label for="rating5">5</label>
+                    </div>
+                    <small class="error-message" id="ratingError"></small>
+                </div>
+                
+                <div id="formSubmissionStatus" class="submission-status" style="display:none;"></div>
+
+                <button type="submit" class="btn-submit-feedback">Submit Feedback</button>
+            </form>
+        </div>
+    </main>
+
+    <div class="footer"></div>
+    <script src="../js/footer.js"></script>
+    <script src="../js/feedback.js"></script>
+</body>
+</html>

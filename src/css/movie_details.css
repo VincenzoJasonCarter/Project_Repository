@@ -1,0 +1,277 @@
+/* css/movie_details.css */
+body {
+    background-color: #faf7d2; /* Match your global theme */
+    color: #443627;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.movie-details-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 65px; /* Adjust based on your fixed navbar height */
+}
+
+.backdrop-container {
+    width: 100%;
+    height: 50vh; /* Adjust as desired, e.g., 400px or 60vh */
+    max-height: 500px;
+    position: relative;
+    overflow: hidden;
+    background-color: #333; /* Fallback color */
+}
+
+.movie-backdrop-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top; /* Focus on the top part of backdrop */
+}
+
+.backdrop-overlay-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%; /* Adjust gradient height */
+    background: linear-gradient(to top, rgba(250, 247, 210, 1) 20%, rgba(250, 247, 210, 0) 100%); /* Gradient to body background */
+}
+
+.details-content-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    max-width: 1200px;
+    margin: -150px auto 0 auto; /* Negative margin to pull content up over backdrop gradient */
+    padding: 0 20px 40px 20px;
+    position: relative; /* To ensure it's above the gradient */
+    z-index: 2;
+    gap: 30px;
+}
+
+.poster-column {
+    flex: 0 0 300px; /* Fixed width for poster column */
+    text-align: center;
+}
+
+.details-movie-poster {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    border: 4px solid white; /* Optional white border */
+}
+
+.details-book-btn {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #f0e68c; /* Gold accent */
+    color: #2e251b; /* Dark brown text */
+    border: none;
+    border-radius: 8px;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.details-book-btn:hover {
+    background-color: #e0c650; /* Darker gold */
+    transform: translateY(-2px);
+}
+
+.info-column {
+    flex: 1; /* Takes remaining space */
+    min-width: 300px; /* Ensure it doesn't get too squished */
+}
+
+.details-movie-title {
+    font-family: 'Epilogue', sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #2e251b; /* Darker brown for title */
+    margin-top: 0; /* Adjust if poster is taller */
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.meta-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 10px; /* Row gap, column gap */
+    align-items: center;
+    margin-bottom: 25px;
+    color: #5a4f42; /* Subtler text color */
+    font-size: 0.9rem;
+}
+
+.meta-tag {
+    background-color: #e9e4c4; /* Light beige background for tags */
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+.meta-separator {
+    display: none; /* Hide separators if tags wrap nicely */
+}
+/* Show separators if items are on the same line and you want them */
+/* @media (min-width: 500px) { .meta-separator { display: inline; } } */
+
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1.6rem;
+    color: #443627;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #dcd1b0; /* Light separator */
+}
+
+/* Ratings Section */
+.ratings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+}
+.rating-item {
+    background-color: #f8f5e7;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #e9e4c4;
+}
+.rating-source {
+    display: block;
+    font-size: 0.8rem;
+    color: #6c5f53;
+    margin-bottom: 5px;
+}
+.rating-value {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2e251b;
+}
+
+/* Crew Section */
+.crew-section p {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+.crew-section p strong {
+    color: #2e251b;
+}
+
+/* Cast Section */
+.cast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px;
+}
+.cast-member {
+    text-align: center;
+}
+.cast-member-photo {
+    width: 100%;
+    max-width: 120px; /* Control max size of photo */
+    height: auto;
+    aspect-ratio: 2/3; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    background-color: #e0e0e0; /* Placeholder bg */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.cast-member-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2e251b;
+    margin-bottom: 2px;
+}
+.cast-member-character {
+    font-size: 0.8rem;
+    color: #5a4f42;
+}
+
+/* Error Message Styling */
+.error-message-details {
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 20px; /* Ensure it's below navbar if navbar is present */
+}
+.error-message-details h2 {
+    color: #c0392b; /* Red for error title */
+    font-size: 2rem;
+    margin-bottom: 15px;
+    border-bottom: none;
+}
+.error-message-details p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+.error-message-details .details-book-btn { /* Re-use button style for home link */
+    display: inline-block;
+    width: auto; /* Don't force full width */
+    padding: 12px 30px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .details-content-wrapper {
+        margin-top: -80px; /* Adjust pull-up for smaller screens */
+        flex-direction: column;
+        align-items: center; /* Center poster column on mobile */
+    }
+    .poster-column {
+        flex: 0 0 auto; /* Don't try to grow/shrink, just be its content size */
+        width: 80%;
+        max-width: 280px; /* Limit poster size on mobile */
+        margin-bottom: 20px;
+    }
+    .info-column {
+        width: 100%;
+    }
+    .details-movie-title {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .meta-info {
+        justify-content: center;
+    }
+    .backdrop-container {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .details-content-wrapper {
+        margin-top: -50px;
+        padding: 0 15px 30px 15px;
+    }
+    .poster-column {
+        max-width: 240px;
+    }
+    .details-movie-title {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+    section h2 {
+        font-size: 1.4rem;
+    }
+    .cast-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 15px;
+    }
+    .cast-member-photo {
+        max-width: 100px;
+    }
+}
+

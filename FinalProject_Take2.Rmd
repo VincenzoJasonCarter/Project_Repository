@@ -1,0 +1,449 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+set.seed(32)
+#Load Libraries
+library(rjags)
+library(dplyr)
+library(ggplot2)
+library(corrplot)
+library(tidyr)
+```
+
+```{r}
+#Read csv
+adm_data <- read.csv("admission_data.csv", header=T)
+adm_data
+```
+
+#Exploratory Data Analysis
+
+## Data Understanding
+
+```{r}
+#Structure of the dataset
+str(adm_data)
+```
+
+```{r}
+#Summary of the dataset
+summary(adm_data)
+```
+
+## Check for Unwanted Values
+
+```{r}
+#Check for duplicate data
+sum(duplicated(adm_data))
+```
+
+No duplicates.
+
+```{r}
+#Check for NA values
+colSums(is.na(adm_data))
+```
+
+No NA values were found.
+
+## Univariate Analysis
+
+```{r}
+#Transform the data
+df_scaled <- as.data.frame(scale(adm_data))
+```
+
+We transform the data to improve readability.
+
+```{r}
+boxplot(df_scaled, 
+        main = "Boxplots for All Variables", 
+        col = rainbow(ncol(adm_data)), # Different colors for each boxplot
+        las = 2,                # Rotate x-axis labels
+        outline = TRUE)
+```
+We can see from the analysis that there are only a few outliars, but not enough to do Robust Scaling.
+
+# Multivariate Analysis
+
+For the multivariate analysis, we will be using a correlation plot to determine the relationship between the weights to each other and the weights to the response variable (Chance of Admit)
+
+```{r}
+cor_data <- as.data.frame(as.table(cor(adm_data)))
+cor_data$Freq = round(cor_data$Freq, 2)
+```
+
+```{r}
+ggplot(cor_data, aes(Var1, Var2, fill = Freq)) +
+  geom_tile() +
+  scale_fill_gradient2(low="red", mid = "white", high = "blue", midpoint=0) +
+  geom_text(aes(label=Freq), color = "black")+
+  theme_minimal()
+  
+  
+```
+
+> From the correlation plot, we can deduce that all 7 covariates have significance towards the response variable (Chance.To.Admit).
+
+# Data Preprocessing
+
+```{r}
+#Initialize Data
+x <- subset(adm_data, select = -Chance.of.Admit)
+y <- adm_data$Chance.of.Admit
+n <- nrow(adm_data)
+col <- ncol(x)
+```
+
+## Data Splitting
+
+We split the data into train and test data to accurately predict the MSE (Mean Squared Error) and overall accuracy of the model.
+
+```{r}
+
+#Split size
+idx_train <- sample(1:n, 0.8*n)
+
+#Split the Data
+x_train = x[idx_train, ]
+x_test = x[-idx_train, ]
+y_train = y[idx_train]
+y_test = y[-idx_train]
+```
+
+## Scaling the Data
+
+We scale the data to help the model better find convergence.
+
+
+```{r}
+#Scale the data to help with convergence
+x_train_scaled <- scale(x_train)
+x_test_scaled <- scale(x_test)
+```
+
+#Modelling
+
+For the model, we will use JAGS implemented in R as the basis.
+
+```{r}
+model_str <- "
+  model{
+    for(i in 1:N){
+      Y[i] ~ dbeta(phi*mu[i], phi * (1-mu[i]))
+      logit(mu[i]) <- beta_0 + inprod(beta[1:col], x[i, 1:col])
+      log_lik[i] <- logdensity.beta(Y[i], mu[i] * phi, (1 - mu[i]) * phi)
+    }
+    
+    #Priors
+    beta_0 ~ dnorm(0, 1)
+    
+    for(i in 1:col){
+      beta[i] ~ dnorm(0, 1)
+    }
+    phi ~ dgamma(0.001, 0.001)
+  }
+"
+```
+
+```{r}
+#Initialize the data list
+data_list <- list(
+  x = x_train_scaled,
+  Y = y_train,
+  N = length(idx_train),
+  col = col
+)
+```
+
+```{r}
+#Initial Values For Each Variable
+inits <- function() {
+  beta_inits <- rnorm(ncol(x), 0, 1)
+  phi_init <- rgamma(1,2,1)
+  list(
+    beta_0 = rnorm(1, 0, 1),
+    beta = beta_inits,
+    phi = max(phi_init, 0.01)
+  )
+}
+```
+
+```{r}
+#Create the Model
+model_beta <- jags.model(
+  textConnection(model_str),
+  data = data_list,
+  inits = inits,
+  n.chains = 5
+)
+```
+
+## Burn-in Process
+
+The burn-in process is done to prevent the model to falsely diagnose the first few iterations (the learning process of the model) as divergency.
+
+```{r}
+update(model_beta, 1e3) #1000 iterations
+```
+
+## Sampling
+
+Sampling is done to take examples from the model to be able to interpret it.
+
+```{r}
+samples <- coda.samples(
+  model = model_beta,
+  variable.names = c("beta_0", "beta", "phi", "log_lik"),
+  n.iter = 1e4 #10000 iterations
+)
+```
+
+#General Evaluation
+
+## Summary of the Sample
+
+```{r}
+#Select only the beta variables
+samples_new <- as.mcmc.list(samples[, grep("beta\\[", colnames(samples[[1]]))])
+```
+
+
+```{r}
+#Summary of the samples
+summary(samples_new)
+```
+
+```{r}
+par(mar=c(2,2,2,2), mfrow=c(3,2))
+plot(samples_new)
+```
+
+From this plot,we can deduce that the trace plots of each variable seems covergent. However, to further confirm this, we can do convergence diagnostics.
+
+# Convergence Diagnostics
+
+## Geweke Diagnostics
+Geweke Diagnostics reveal the convergence z-score for each chain's parameters.
+
+### Diagnostics
+
+```{r}
+for (i in 1:5){
+  cat("Chain", i)
+  print(geweke.diag(samples_new[[i]]))
+}
+```
+
+
+### Plot
+
+```{r}
+par(mar=c(2,2,2,2))
+for (i in 1:5){
+  geweke.plot(samples_new[[i]])
+}
+```
+
+## Gelman-Rubin Diagnostics
+
+### Diagnostics
+
+```{r}
+gelman.diag(samples_new)
+```
+
+### Plot
+
+```{r}
+par(mar=c(2,2,2,2))
+gelman.plot(samples_new)
+```
+## Raftery-Lewis Diagnostics
+```{r}
+raftery.diag(samples_new)
+
+```
+```{r}
+??coda
+```
+
+
+## Effective Sample Size
+
+```{r}
+effectiveSize(samples_new)
+```
+
+The effective sample size indicates that the sample's phi and beta_0 has low autocorrelation, as the ESS for phi and beta_0 is close to the total iterations (25.000), but the other values is adequate for reliable inference but shows room for optimization.
+
+## AutoCorrelation
+
+```{r}
+zero_lag_max <- 0
+for(i in 1:5){
+  par(mar=c(2,2,2,2))
+  acf_result <- acf(samples_new[[i]], plot=F)
+  lags <- acf_result$lag
+  acf_values <- acf_result$acf
+  zero_lag_index <- which.min(abs(acf_values))
+  zero_lag <- lags[zero_lag_index]
+  cat("Autocorr is 0 for chain", i, "at lag", zero_lag, "\n") 
+  zero_lag_max = ifelse(zero_lag > zero_lag_max, zero_lag, zero_lag_max)
+}
+
+```
+
+```{r}
+par(mar=c(2,2,2,2))
+autocorr.plot(samples_new)
+```
+# Model Comparison
+```{r}
+log_lik_matrix <- as.matrix(samples[, grep("log_lik", colnames(as.matrix(samples)))])
+```
+
+```{r}
+lppd <- sum(log(colMeans(exp(log_lik_matrix))))  # Log pointwise predictive density
+p_waic <- sum(apply(log_lik_matrix, 2, var))  # Effective number of parameters
+cat("p_WAIC:", p_waic, "\n")
+waic <- -2 * (lppd - p_waic)             # WAIC
+
+cat("WAIC:", waic, "\n")
+```
+
+```{r}
+library(loo)
+log_lik_array <- array(log_lik_matrix, dim = c(nrow(log_lik_matrix), n))
+
+# Perform LOO-CV
+loo_result <- loo(log_lik_array)
+
+# Print the result
+print(loo_result)
+```
+
+# Predictions
+
+```{r}
+#Separate samples
+combined_samples <- as.matrix(samples_new)
+
+beta_0_samples <- as.matrix(samples[, "beta_0"])
+beta_samples <- as.matrix(combined_samples[, grep("beta\\[", colnames(combined_samples))])
+phi_samples <- as.matrix(samples[, "phi"])
+
+
+n_samples <- nrow(as.matrix(samples_new))  # Number of posterior samples
+n_test <- nrow(x_test)  # Number of test observations
+```
+
+```{r}
+# Preallocate matrix for predicted mu
+x_test_scaled <- as.matrix(x_test_scaled)
+pred_mu <- matrix(NA, nrow = nrow(beta_samples), ncol = n_test)
+
+# Compute predicted mu for each test observation
+
+for (i in 1:nrow(beta_samples)) {
+  pred_mu[i, ] <- plogis(beta_0_samples[i] + x_test_scaled %*% beta_samples[i, ])
+}
+```
+
+```{r}
+# Generate predictions for Y (Beta distribution)
+pred_y <- matrix(NA, nrow = n_samples, ncol = n_test)
+for (i in 1:n_samples) {
+  for (j in 1:n_test) {
+    pred_y[i, j] <- rbeta(1, phi_samples[i] * pred_mu[i, j], phi_samples[i] * (1 - pred_mu[i, j]))
+  }
+}
+```
+
+## Frequentist Metrics
+
+### Model MSE (Mean Squared Error)
+
+```{r}
+mse <- mean((apply(pred_y, 2, mean) - y_test)^2)
+print(mse)
+```
+
+### Baseline MSE
+
+```{r}
+baseline_mse <- mean((y_test - mean(y_train))^2)
+baseline_mse
+```
+
+```{r}
+pred_mean <- apply(pred_y, 2, mean)
+pred_df <- data.frame(
+  True = y_test,
+  Predicted = pred_mean,
+  Residual = y_test - pred_mean
+)
+
+pred_df
+```
+
+```{r}
+ggplot() +
+  geom_density(data = pred_df, aes(x = Predicted), color = "orange", fill = "orange", alpha = 0.3) +
+  geom_density(data = pred_df, aes(x = True), color = "blue", fill = "blue", alpha = 0.3) +
+  labs(title = "Density of True vs Predicted",
+       x = "Values",
+       y = "Density",
+       fill = "Legend") +
+  theme_minimal()
+```
+
+```{r}
+#Range of Error
+ggplot() +
+ geom_density(data = pred_df, aes(x = Residual), color = "violet", fill = "maroon", alpha = 0.3) +
+  labs(
+    title = "Distribution of Residuals",
+    x = "Residuals",
+    y = "Frequency"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 14),  # Centered title
+    axis.title = element_text(size = 12),  # Axis labels
+    axis.text = element_text(size = 10)  # Axis ticks
+  )
+```
+
+```{r}
+library(tidyr)
+
+pred_long <- pivot_longer(pred_df, cols = c(True, Predicted), names_to = "Type", values_to = "Value")
+
+# Line plot for True and Predicted values
+ggplot(pred_long, aes(x = seq_along(Value), y = Value, color = Type)) +
+  geom_line() +
+  labs(
+    title = "True and Predicted Values Comparison",
+    x = "Index",
+    y = "Value"
+  ) +
+  scale_color_manual(values = c("True" = "blue", "Predicted" = "red")) +
+  theme_minimal()
+
+```
+
+### Posterior Predicted P-Value (PPP-value)
+
+```{r}
+observed_mean <- mean(y_test)
+predicted_mean <- apply(pred_y, 2, mean)
+
+ppp_value <- mean(predicted_mean >= observed_mean)
+print(paste("Posterior Predictive p-value:", ppp_value))
+```
+
